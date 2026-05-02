@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock } from "lucide-react";
 
 // Social icons — lucide-react doesn't export Facebook/Instagram/TikTok
@@ -97,27 +98,8 @@ const Footer = () => {
           <div className="lg:col-span-1">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 shrink-0">
-                <svg viewBox="0 0 48 48" className="w-full h-full" fill="none">
-                  <defs>
-                    <linearGradient id="footerGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#d4af37" />
-                      <stop offset="50%" stopColor="#f3e5ab" />
-                      <stop offset="100%" stopColor="#b8860b" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M8 20 L14 12 L24 18 L34 12 L40 20 L38 28 H10 Z"
-                    fill="url(#footerGold)"
-                  />
-                  <path
-                    d="M12 28 C12 28 10 38 14 42 C16 44 18 40 20 38 C21 36 23 36 24 36 C25 36 27 36 28 38 C30 40 32 44 34 42 C38 38 36 28 36 28 Z"
-                    fill="url(#footerGold)"
-                  />
-                  <circle cx="14" cy="22" r="2" fill="white" opacity="0.7" />
-                  <circle cx="24" cy="19" r="2" fill="white" opacity="0.7" />
-                  <circle cx="34" cy="22" r="2" fill="white" opacity="0.7" />
-                </svg>
+              <div className="relative w-12 h-12 flex items-center justify-center shrink-0">
+                <Image src="/logouchuya.png" alt="Uchuya Dental Premium" width={48} height={48} className="object-contain" />
               </div>
               <div>
                 <span className="font-heading font-bold text-xl block leading-none text-white">

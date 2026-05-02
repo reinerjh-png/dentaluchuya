@@ -130,7 +130,7 @@ const Locations = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`Mapa de sede ${sede.name}`}
-                    className="grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="transition-all duration-500"
                   />
                 </div>
 

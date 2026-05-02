@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -40,32 +41,9 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            {/* Crown + Tooth SVG Logo */}
-            <div className="relative w-11 h-11 flex items-center justify-center">
-              <svg viewBox="0 0 48 48" className="w-full h-full" fill="none">
-                <defs>
-                  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#d4af37" />
-                    <stop offset="50%" stopColor="#f3e5ab" />
-                    <stop offset="100%" stopColor="#b8860b" />
-                  </linearGradient>
-                </defs>
-                {/* Crown */}
-                <path
-                  d="M8 20 L14 12 L24 18 L34 12 L40 20 L38 28 H10 Z"
-                  fill="url(#goldGrad)"
-                  strokeLinejoin="round"
-                />
-                {/* Tooth body */}
-                <path
-                  d="M12 28 C12 28 10 38 14 42 C16 44 18 40 20 38 C21 36 23 36 24 36 C25 36 27 36 28 38 C30 40 32 44 34 42 C38 38 36 28 36 28 Z"
-                  fill="url(#goldGrad)"
-                />
-                {/* Crown jewel dots */}
-                <circle cx="14" cy="22" r="2" fill="white" opacity="0.8" />
-                <circle cx="24" cy="19" r="2" fill="white" opacity="0.8" />
-                <circle cx="34" cy="22" r="2" fill="white" opacity="0.8" />
-              </svg>
+            {/* Custom PNG Logo */}
+            <div className="relative w-12 h-12 flex items-center justify-center shrink-0">
+              <Image src="/logouchuya.png" alt="Uchuya Dental Premium" width={48} height={48} className="object-contain" />
             </div>
             <div className="flex flex-col">
               <span
