@@ -13,13 +13,13 @@ const InstagramIcon = () => (
 
 const TEAM = [
   {
-    name: "Dra. Meilyng Uchuya",
-    role: "Directora Médica & Especialista en Estética Dental",
+    name: "Dr. Fernando Uchuya",
+    role: "Odontólogo Principal & Director Médico",
     specialty: "Diseño de Sonrisa · Implantes · Rehabilitación",
-    bio: "Con más de 10 años dedicados a transformar sonrisas, la Dra. Meilyng lidera un equipo de alto rendimiento comprometido con la excelencia clínica y la calidez humana.",
-    image: "/doctor.png",
+    bio: "Con dedicación a transformar sonrisas, el Dr. Fernando lidera un equipo de alto rendimiento comprometido con la excelencia clínica y la calidez humana.",
+    image: "/druchuya.png",
     instagram: "https://www.instagram.com/clinicadentaluchuya_premium",
-    awards: ["Especialista en Estética Dental", "Miembro COP", "Certificada en Implantología"],
+    awards: ["Odontólogo Principal", "Miembro COP", "Especialista en Rehabilitación"],
   },
   {
     name: "Dr. Especialista Ortodoncia",

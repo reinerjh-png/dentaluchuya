@@ -56,8 +56,8 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative w-full aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="/doctor.png"
-                  alt="Dra. Meilyng Uchuya - Directora de la Clínica Dental Uchuya Premium"
+                  src="/doctoruchuya.jfif"
+                  alt="Dr. Fernando Uchuya - Odontólogo Principal de la Clínica Dental Uchuya Premium"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -69,8 +69,8 @@ export default function Home() {
                 <p className="text-gold font-bold text-sm mb-2 italic leading-relaxed">
                   &ldquo;Mi compromiso es devolverte la confianza de sonreír&rdquo;
                 </p>
-                <p className="text-gray-900 font-bold text-xs">Dra. Meilyng Uchuya</p>
-                <p className="text-gray-400 text-[10px]">Directora Médica</p>
+                <p className="text-gray-900 font-bold text-xs">Dr. Fernando Uchuya</p>
+                <p className="text-gray-400 text-[10px]">Odontólogo Principal</p>
               </div>
 
               {/* Experience badge */}

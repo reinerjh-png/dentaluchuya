@@ -19,9 +19,9 @@ const GALLERY_ITEMS = [
     size: "col-span-1 row-span-1",
   },
   {
-    src: "/doctor.png",
-    alt: "Dra. Meilyng Uchuya",
-    label: "Directora Médica",
+    src: "/druchuya.png",
+    alt: "Dr. Fernando Uchuya",
+    label: "Odontólogo Principal",
     size: "col-span-1 row-span-1",
   },
   {
@@ -119,7 +119,7 @@ const Gallery = () => {
           className="text-center mt-16"
         >
           <p className="text-gray-500 mb-6">
-            ¿Quieres ver más resultados? Visítanos en nuestras redes sociales.
+            ¿Quieres ver más resultados? Visíta nuestra página de Facebook.
           </p>
           <div className="flex gap-4 justify-center items-center flex-wrap">
             <a

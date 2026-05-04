@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "ortodoncia Aucayacu",
     "blanqueamiento dental",
     "Clínica Dental Uchuya",
-    "Meilyng Uchuya dentista",
+    "Fernando Uchuya dentista",
     "odontología estética Selva Central",
   ],
   authors: [{ name: "Clínica Dental Uchuya Premium" }],

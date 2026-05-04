@@ -10,7 +10,7 @@ const TESTIMONIALS = [
     location: "Tingo María",
     service: "Diseño de Sonrisa",
     rating: 5,
-    text: "¡Me cambiaron la vida! Llevaba años con complejos por mi sonrisa. El equipo de la Dra. Meilyng fue increíblemente profesional y cariñoso. Ahora sonrío con total confianza.",
+    text: "¡Me cambiaron la vida! Llevaba años con complejos por mi sonrisa. El equipo del Dr. Fernando fue increíblemente profesional y cariñoso. Ahora sonrío con total confianza.",
     initial: "MF",
   },
   {

@@ -1,4 +1,4 @@
-# Clínica Dental Premium Uchuya de Meilyng
+# Clínica Dental Premium Uchuya
 
 Aplicación web profesional construida con **Next.js 15**, **Tailwind CSS v4** y **Framer Motion**. Diseñada para transmitir confianza, lujo y captar clientes potenciales de manera efectiva.
 

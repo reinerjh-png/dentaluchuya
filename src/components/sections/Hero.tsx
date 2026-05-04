@@ -88,7 +88,7 @@ const Hero = () => {
               href="#contacto"
               className="inline-flex items-center justify-center gap-2 bg-gold-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform premium-shadow"
             >
-              Agenda Hoy — Es Gratis
+              Agenda tu cita
               <ChevronRight size={20} />
             </Link>
             <Link
@@ -141,7 +141,7 @@ const Hero = () => {
           </div>
           <div>
             <p className="text-white font-bold text-sm">Años de Excelencia</p>
-            <p className="text-white/60 text-xs">5,000+ pacientes atendidos</p>
+            <p className="text-white/60 text-xs">10,000+ pacientes atendidos</p>
           </div>
         </motion.div>
       </motion.div>
