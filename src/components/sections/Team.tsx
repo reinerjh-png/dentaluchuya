@@ -16,17 +16,19 @@ const TEAM = [
     name: "Dr. Fernando Uchuya",
     role: "Odontólogo Principal & Director Médico",
     specialty: "Diseño de Sonrisa · Implantes · Rehabilitación",
-    bio: "Con dedicación a transformar sonrisas, el Dr. Fernando lidera un equipo de alto rendimiento comprometido con la excelencia clínica y la calidez humana.",
-    image: "/druchuya.png",
+    bio: "Fundador de la Clínica Dental Uchuya Premium en Tingo María. Con más de 10 años transformando sonrisas en la Selva Central del Perú, lidera un equipo de élite comprometido con la excelencia clínica.",
+    image: "/druchuya.webp",
+    imageAlt: "Dr. Fernando Uchuya – Odontólogo y fundador de la Clínica Dental Uchuya Premium en Tingo María, Huánuco",
     instagram: "https://www.instagram.com/clinicadentaluchuya_premium",
     awards: ["Odontólogo Principal", "Miembro COP", "Especialista en Rehabilitación"],
   },
   {
     name: "Dr. Roberto Hidalgo",
-    role: "Cirujano dentista de la sede Aucayacu",
+    role: "Cirujano Dentista – Sede Aucayacu",
     specialty: "Brackets · Invisalign · Ortopedia Maxilar",
-    bio: "Especialista en corrección de maloclusiones y armonía facial. Crea sonrisas perfectamente alineadas usando las técnicas más modernas y eficientes del mercado.",
-    image: "/dcroberto.png",
+    bio: "Especialista en ortodoncia y corrección de maloclusiones al servicio de los pacientes de Aucayacu y la región de Huánuco. Usa las técnicas más modernas para lograr sonrisas alineadas y armoniosas.",
+    image: "/dcroberto.webp",
+    imageAlt: "Dr. Roberto Hidalgo – Especialista en ortodoncia en la sede Aucayacu de Clínica Dental Uchuya, Huánuco",
     instagram: "https://www.instagram.com/clinicadentaluchuya_premium",
     awards: ["Especialidad en Ortodoncia", "Certificado en Invisalign", "Miembro COP"],
   },
@@ -34,8 +36,9 @@ const TEAM = [
     name: "Dr. Ivan Sánchez",
     role: "Odontopediatra",
     specialty: "Odontopediatría · Carillas · Sellantes",
-    bio: "Dedicado al cuidado dental de los más pequeños. Su enfoque lúdico y empático transforma la visita al dentista en una experiencia positiva que dura toda la vida.",
-    image: "/dcivan.png",
+    bio: "El dentista infantil de referencia en Tingo María. Su enfoque lúdico y empático transforma la visita al dentista en una experiencia positiva para los niños de la Selva Central desde el primer diente.",
+    image: "/dcivan.webp",
+    imageAlt: "Dr. Ivan Sánchez – Odontopediatra especialista en niños en la Clínica Dental Uchuya Premium, Tingo María",
     instagram: "https://www.instagram.com/clinicadentaluchuya_premium",
     awards: ["Especialidad Odontopediatría", "Terapia de Conductos Pediátrica", "Carillas Dentales"],
   },
@@ -61,10 +64,12 @@ const Team = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-6"
           >
-            El <span className="text-gold-dark">Equipo</span> detrás de tu Sonrisa
+            Nuestros Dentistas en{" "}
+            <span className="text-gold-dark">Tingo María y Aucayacu</span>
           </motion.h2>
           <p className="text-gray-500 text-lg leading-relaxed">
-            Profesionales altamente capacitados con vocación de servicio, comprometidos con ofrecerte la mejor experiencia dental de tu vida.
+            Especialistas certificados con vocación de servicio, comprometidos con
+            ofrecerte la mejor experiencia dental en la Selva Central del Perú.
           </p>
         </div>
 
@@ -83,7 +88,7 @@ const Team = () => {
               <div className="relative h-[420px] rounded-[40px] overflow-hidden mb-8">
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={member.imageAlt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

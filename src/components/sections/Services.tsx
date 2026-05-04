@@ -6,32 +6,38 @@ import { Sparkles, ShieldCheck, Heart, Zap, Star, UserCheck } from "lucide-react
 const SERVICES = [
   {
     title: "Diseño de Sonrisa",
-    description: "Personalizamos cada detalle para lograr la sonrisa perfecta que siempre soñaste.",
+    description:
+      "El tratamiento más solicitado por nuestros pacientes en Tingo María. Personalizamos cada detalle — forma, color y proporción — para lograr la sonrisa que siempre soñaste, adaptada a tu rostro y personalidad.",
     icon: Sparkles,
   },
   {
     title: "Implantes Dentales",
-    description: "Recupera la funcionalidad y estética con tecnología de carga inmediata.",
+    description:
+      "Somos el centro de implantología de referencia en la Selva Central del Perú. Recupera la función masticatoria y la estética con implantes de titanio de carga inmediata y tecnología de precisión.",
     icon: ShieldCheck,
   },
   {
-    title: "Ortodoncia Estética",
-    description: "Alineamos tu sonrisa con sistemas discretos y resultados eficientes.",
+    title: "Ortodoncia con Brackets e Invisalign",
+    description:
+      "Alineamos tu sonrisa en Tingo María y Aucayacu con brackets convencionales, zafiro o con alineadores Invisalign. Tratamientos para niños, adolescentes y adultos con seguimiento mensual personalizado.",
     icon: Zap,
   },
   {
-    title: "Blanqueamiento",
-    description: "Brillo natural y duradero con los mejores materiales del mercado.",
+    title: "Blanqueamiento Dental",
+    description:
+      "Recupera el blanco natural de tus dientes con los sistemas de blanqueamiento más avanzados del mercado, disponibles en nuestras dos sedes en Huánuco. Resultados visibles desde la primera sesión.",
     icon: Star,
   },
   {
     title: "Odontopediatría",
-    description: "Cuidado especializado para los más pequeños en un ambiente de confianza.",
+    description:
+      "Cuidado dental especializado para niños en Tingo María en un ambiente cálido, lúdico y sin miedo. Controles desde el primer diente, sellantes, flúor y tratamientos adaptados a cada etapa de crecimiento.",
     icon: Heart,
   },
   {
     title: "Rehabilitación Oral",
-    description: "Soluciones integrales para devolver la salud y armonía a tu boca.",
+    description:
+      "Reconstruimos tu salud bucal de forma integral en nuestra clínica dental en Aucayacu y Tingo María. Coronas, carillas, prótesis removibles y fijas con materiales estéticos de la más alta calidad.",
     icon: UserCheck,
   },
 ];
@@ -44,6 +50,7 @@ const Services = () => {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             className="text-gold font-bold tracking-[0.2em] uppercase text-sm"
           >
             Nuestras Especialidades
@@ -51,11 +58,23 @@ const Services = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-6"
           >
-            Servicios Dentales de <span className="text-gold-dark">Clase Mundial</span>
+            Tratamientos Dentales en{" "}
+            <span className="text-gold-dark">Tingo María y Aucayacu</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-gold mx-auto" />
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-gray-500 text-lg leading-relaxed"
+          >
+            La clínica dental premium de la Selva Central de Huánuco. Ofrecemos todos los
+            tratamientos odontológicos bajo un mismo techo, con tecnología de vanguardia y
+            atención personalizada.
+          </motion.p>
+          <div className="w-20 h-1 bg-gold mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

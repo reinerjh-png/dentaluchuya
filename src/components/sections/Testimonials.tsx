@@ -107,6 +107,7 @@ const Testimonials = () => {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             className="text-gold font-bold tracking-[0.2em] uppercase text-sm"
           >
             Testimonios Reales
@@ -114,6 +115,7 @@ const Testimonials = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-6"
           >
             Pacientes que{" "}
@@ -128,6 +130,7 @@ const Testimonials = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-16"
         >
           {[

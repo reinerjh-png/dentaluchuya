@@ -29,6 +29,7 @@ const SEDES = [
 ];
 
 const Locations = () => {
+
   return (
     <section id="sedes" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
@@ -119,8 +120,8 @@ const Locations = () => {
                   </li>
                 </ul>
 
-                {/* Map iframe */}
-                <div className="relative rounded-2xl overflow-hidden h-[240px] mb-6 group">
+                {/* Map iframe — lazy loaded by the browser until scrolled into view */}
+                <div className="relative rounded-2xl overflow-hidden h-[240px] mb-6">
                   <iframe
                     src={sede.mapsUrl}
                     width="100%"
@@ -130,7 +131,6 @@ const Locations = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`Mapa de sede ${sede.name}`}
-                    className="transition-all duration-500"
                   />
                 </div>
 

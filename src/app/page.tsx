@@ -1,14 +1,17 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
-import Services from "@/components/sections/Services";
-import Gallery from "@/components/sections/Gallery";
-import FAQ from "@/components/sections/FAQ";
-import Locations from "@/components/sections/Locations";
-import Team from "@/components/sections/Team";
-import Testimonials from "@/components/sections/Testimonials";
-import ContactForm from "@/components/ui/ContactForm";
 import Image from "next/image";
 import Link from "next/link";
 import { Shield, Star, Users, Award, CheckCircle } from "lucide-react";
+
+// Below-the-fold sections loaded lazily — they only download when needed
+const Services     = dynamic(() => import("@/components/sections/Services"));
+const Gallery      = dynamic(() => import("@/components/sections/Gallery"));
+const Team         = dynamic(() => import("@/components/sections/Team"));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const FAQ          = dynamic(() => import("@/components/sections/FAQ"));
+const ContactForm  = dynamic(() => import("@/components/ui/ContactForm"));
+const Locations    = dynamic(() => import("@/components/sections/Locations"));
 
 const TRUST_BADGES = [
   { icon: Shield, text: "Garantía Total", sub: "Tratamientos seguros y certificados" },
@@ -24,7 +27,11 @@ export default function Home() {
       <Hero />
 
       {/* ── 2. TRUST BAR ────────────────────────────── */}
-      <div className="bg-white py-12 border-b border-gray-100">
+      <div
+        className="bg-white py-12 border-b border-gray-100"
+        aria-label="Indicadores de confianza"
+        role="region"
+      >
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {TRUST_BADGES.map(({ icon: Icon, text, sub }) => (
@@ -49,18 +56,26 @@ export default function Home() {
       <Services />
 
       {/* ── 4. SOBRE NOSOTROS ───────────────────────── */}
-      <section id="nosotros" className="py-24 bg-white overflow-hidden">
+      <section
+        id="nosotros"
+        className="py-24 bg-white overflow-hidden"
+        aria-label="Sobre la Clínica Dental Uchuya Premium"
+        itemScope
+        itemType="https://schema.org/MedicalOrganization"
+      >
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16 xl:gap-24">
             {/* Image side */}
             <div className="lg:w-1/2 relative">
               <div className="relative w-full aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none">
                 <Image
-                  src="/doctoruchuya.jfif"
-                  alt="Dr. Fernando Uchuya - Odontólogo Principal de la Clínica Dental Uchuya Premium"
+                  src="/druchuya.webp"
+                  alt="Dr. Fernando Uchuya – Odontólogo Principal y Director Médico de la Clínica Dental Uchuya Premium en Tingo María"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
+                  itemProp="image"
                 />
               </div>
 
@@ -85,32 +100,34 @@ export default function Home() {
               <span className="text-gold font-bold tracking-[0.2em] uppercase text-sm">
                 Sobre Nosotros
               </span>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-8 leading-tight">
-                Liderando la{" "}
-                <span className="text-gold-dark">Excelencia Dental</span>{" "}
-                en la Selva Central
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-8 leading-tight" itemProp="name">
+                El Mejor Dentista{" "}
+                <span className="text-gold-dark">en Tingo María</span>{" "}
+                y Aucayacu
               </h2>
               <div className="space-y-5 text-gray-600 text-lg leading-relaxed mb-10">
-                <p>
-                  En Clínica Dental Uchuya Premium, no solo cuidamos dientes —{" "}
-                  <strong className="text-gray-900">transformamos vidas</strong>. Con más de una
-                  década de experiencia, nos hemos consolidado como el centro odontológico de
-                  referencia en Tingo María y Aucayacu.
+                <p itemProp="description">
+                  La <strong className="text-gray-900">Clínica Dental Uchuya Premium</strong> es el
+                  centro odontológico líder en Tingo María, Aucayacu y toda la región de Huánuco.
+                  Con más de una década atendiendo a familias de la Selva Central, combinamos
+                  tecnología de vanguardia con la calidez humana que mereces.
                 </p>
                 <p>
-                  Nuestra filosofía combina la calidez humana con la precisión tecnológica,
-                  asegurando que cada paciente reciba un trato digno de la más alta exigencia.
-                  Agenda hoy y siente la diferencia desde el primer minuto.
+                  Desde diseños de sonrisa hasta implantes dentales y ortodoncia, somos el único
+                  centro en la región que ofrece todos los tratamientos bajo un mismo techo, con
+                  especialistas certificados y equipos digitales de última generación. Agenda hoy
+                  tu <strong className="text-gray-900">evaluación gratuita</strong> en cualquiera
+                  de nuestras dos sedes.
                 </p>
               </div>
 
               {/* Checklist */}
               <ul className="space-y-3 mb-12">
                 {[
-                  "Tecnología digital de última generación",
-                  "Atención personalizada sin listas de espera",
-                  "Planes de pago flexibles y accesibles",
-                  "Garantía en todos nuestros tratamientos",
+                  "La única clínica con 2 sedes en Tingo María y Aucayacu",
+                  "Especialistas certificados con atención sin listas de espera",
+                  "Planes de pago flexibles accesibles para toda la familia",
+                  "Garantía total en todos nuestros tratamientos dentales",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-gray-700">
                     <CheckCircle size={18} className="text-gold shrink-0" />
@@ -139,7 +156,7 @@ export default function Home() {
                 href="#contacto"
                 className="inline-flex items-center gap-2 bg-gold-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform premium-shadow"
               >
-                Agenda tu evaluación gratis
+                Agenda tu evaluación hoy
               </Link>
             </div>
           </div>
@@ -147,26 +164,40 @@ export default function Home() {
       </section>
 
       {/* ── 5. GALERÍA ──────────────────────────────── */}
-      <Gallery />
+      <div aria-label="Galería de resultados y clínica">
+        <Gallery />
+      </div>
 
       {/* ── 6. EQUIPO MÉDICO ────────────────────────── */}
-      <div id="equipo">
+      <div
+        id="equipo"
+        aria-label="Equipo de especialistas dentales"
+      >
         <Team />
       </div>
 
       {/* ── 7. TESTIMONIOS ──────────────────────────── */}
-      <Testimonials />
+      <div aria-label="Opiniones de pacientes">
+        <Testimonials />
+      </div>
 
       {/* ── 8. FAQ ──────────────────────────────────── */}
-      <div id="faq">
+      <div
+        id="faq"
+        aria-label="Preguntas frecuentes sobre tratamientos dentales"
+      >
         <FAQ />
       </div>
 
       {/* ── 9. FORMULARIO DE CONTACTO ──────────────── */}
-      <ContactForm />
+      <div aria-label="Agendar cita en la clínica dental">
+        <ContactForm />
+      </div>
 
       {/* ── 10. SEDES ────────────────────────────────── */}
-      <Locations />
+      <div aria-label="Ubicaciones de la clínica en Tingo María y Aucayacu">
+        <Locations />
+      </div>
     </div>
   );
 }

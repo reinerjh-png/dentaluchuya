@@ -99,7 +99,7 @@ const Footer = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="relative w-12 h-12 flex items-center justify-center shrink-0">
-                <Image src="/logouchuya.png" alt="Uchuya Dental Premium" width={48} height={48} className="object-contain" />
+                <Image src="/logouchuya.webp" alt="Uchuya Dental Premium" width={48} height={48} className="object-contain" />
               </div>
               <div>
                 <span className="font-heading font-bold text-xl block leading-none text-white">

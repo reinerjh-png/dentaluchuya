@@ -21,58 +21,282 @@ const BASE_URL = "https://clinicadentaluchuya.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+
   title: {
-    default: "Clínica Dental Uchuya Premium | Sonrisas que Inspiran – Tingo María & Aucayacu",
+    default: "Clínica Dental Uchuya Premium | Dentista en Tingo María y Aucayacu – Perú",
     template: "%s | Clínica Dental Uchuya Premium",
   },
+
   description:
-    "Especialistas en odontología estética y salud dental premium en Tingo María y Aucayacu. Diseño de sonrisa, implantes, ortodoncia y blanqueamiento con tecnología de vanguardia. Reserva tu cita hoy mismo.",
+    "Clínica Dental Uchuya Premium: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Primera evaluación GRATIS. Llama al +51 900 755 788.",
+
   keywords: [
-    "dentista Tingo María",
-    "dentista Aucayacu",
-    "clínica dental premium",
-    "diseño de sonrisa Perú",
-    "implantes dentales Tingo María",
-    "ortodoncia Aucayacu",
-    "blanqueamiento dental",
+    // Marca
     "Clínica Dental Uchuya",
-    "Fernando Uchuya dentista",
-    "odontología estética Selva Central",
+    "Dental Uchuya Premium",
+    "Dr. Fernando Uchuya",
+    "dentista Fernando Uchuya",
+    // Localización
+    "dentista Tingo María",
+    "clínica dental Tingo María",
+    "odontólogo Tingo María",
+    "dentista Aucayacu",
+    "clínica dental Aucayacu",
+    "odontólogo Aucayacu",
+    "dentista Huánuco",
+    "dentista Selva Central",
+    "dentista Leoncio Prado",
+    // Servicios
+    "diseño de sonrisa Tingo María",
+    "implantes dentales Tingo María",
+    "ortodoncia brackets Tingo María",
+    "Invisalign Tingo María",
+    "blanqueamiento dental Tingo María",
+    "odontopediatría Tingo María",
+    "rehabilitación oral Tingo María",
+    "carillas dentales Tingo María",
+    "extracción dental Tingo María",
+    "limpieza dental Tingo María",
+    // Generales
+    "clínica dental premium Perú",
+    "odontología estética Perú",
+    "mejores dentistas Perú",
   ],
-  authors: [{ name: "Clínica Dental Uchuya Premium" }],
+
+  authors: [
+    { name: "Clínica Dental Uchuya Premium", url: BASE_URL },
+    { name: "Dr. Fernando Uchuya" },
+  ],
   creator: "Clínica Dental Uchuya Premium",
+  publisher: "Clínica Dental Uchuya Premium",
+
+  category: "health",
+
   openGraph: {
     type: "website",
     locale: "es_PE",
     url: BASE_URL,
     siteName: "Clínica Dental Uchuya Premium",
-    title: "Clínica Dental Uchuya Premium | Transformamos Sonrisas",
+    title: "Clínica Dental Uchuya Premium | Transforma tu Sonrisa en Tingo María",
     description:
-      "Líderes en odontología estética con tecnología de vanguardia y atención personalizada en Tingo María y Aucayacu, Perú.",
+      "Especialistas en odontología estética y salud dental premium en Tingo María y Aucayacu, Perú. Diseño de sonrisa, implantes, ortodoncia, blanqueamiento. ¡Primera evaluación gratuita!",
     images: [
       {
-        url: "/hero.png",
+        url: "/hero.webp",
         width: 1200,
         height: 630,
-        alt: "Clínica Dental Uchuya Premium – Instalaciones de lujo",
+        alt: "Clínica Dental Uchuya Premium – Instalaciones modernas en Tingo María",
+        type: "image/webp",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Clínica Dental Uchuya Premium | Sonrisas que Inspiran",
+    title: "Clínica Dental Uchuya Premium | Tingo María & Aucayacu",
     description:
-      "Especialistas en odontología estética y salud dental premium en la Selva Central del Perú.",
-    images: ["/hero.png"],
+      "Diseño de sonrisa, implantes, ortodoncia y más. Primera evaluación GRATIS. ¡Transforma tu sonrisa hoy!",
+    images: ["/hero.webp"],
   },
+
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-  alternates: { canonical: BASE_URL },
+
+  alternates: {
+    canonical: BASE_URL,
+  },
+
   icons: {
-    icon: "/logouchuya.png",
+    icon: [
+      { url: "/logouchuya.webp", type: "image/webp" },
+    ],
+    apple: "/logouchuya.webp",
+  },
+
+  verification: {
+    // Agrega tu código cuando lo tengas en Google Search Console:
+    // google: "TU_CODIGO_AQUI",
+  },
+};
+
+// ─── Structured Data helpers ────────────────────────────
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": `${BASE_URL}/#dentist`,
+  name: "Clínica Dental Uchuya Premium",
+  alternateName: "Dental Uchuya",
+  description:
+    "Clínica dental de alta especialidad con dos sedes en la Selva Central del Perú. Ofrecemos diseño de sonrisa, implantes dentales, ortodoncia, blanqueamiento, odontopediatría y rehabilitación oral.",
+  url: BASE_URL,
+  logo: `${BASE_URL}/logouchuya.webp`,
+  image: `${BASE_URL}/hero.webp`,
+  telephone: ["+51900755788", "+51935817120"],
+  email: "admidentaluchuya@gmail.com",
+  priceRange: "$$",
+  currenciesAccepted: "PEN",
+  paymentAccepted: "Cash, Credit Card, Debit Card",
+  hasMap: "https://maps.google.com/?q=Av.+Alameda+Perú+425,+Tingo+María,+Peru",
+  sameAs: [
+    "https://www.facebook.com/share/1Cf85rz4B8/?mibextid=wwXIfr",
+    "https://www.instagram.com/clinicadentaluchuya_premium",
+    "https://www.tiktok.com/@uchuya_dental_premium",
+  ],
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Av. Alameda Perú 425",
+      addressLocality: "Tingo María",
+      addressRegion: "Huánuco",
+      postalCode: "10131",
+      addressCountry: "PE",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Av. Lima 455",
+      addressLocality: "Aucayacu",
+      addressRegion: "Huánuco",
+      postalCode: "10171",
+      addressCountry: "PE",
+    },
+  ],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -9.2974,
+    longitude: -76.0026,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "20:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "500",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  medicalSpecialty: [
+    "Dentistry",
+    "Orthodontics",
+    "Oral Surgery",
+    "Pediatric Dentistry",
+    "Cosmetic Dentistry",
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "¿Cuáles son los cuidados después de un blanqueamiento dental?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Evita alimentos y bebidas muy pigmentadas (café, té, vino tinto, salsas oscuras) durante las primeras 48 horas. No fumes, usa pajitas para beber y cepíllate con pasta para dientes sensibles. Los resultados pueden durar de 1 a 3 años con un buen mantenimiento.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué cuidados debo tener tras colocar un implante dental?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Las primeras 24 horas aplica hielo cada 20 minutos para reducir la inflamación. Evita alimentos duros, enjuagues con agua tibia y sal, y no toques la zona con la lengua. La osteointegración tarda 2-3 meses.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto tiempo dura el tratamiento de ortodoncia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La duración depende de la complejidad del caso. En promedio, un tratamiento con brackets convencionales tarda entre 12 y 24 meses. Los casos leves pueden resolverse en 8-12 meses con alineadores invisibles.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuántas citas necesito para un diseño de sonrisa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El proceso completo de diseño de sonrisa suele requerir entre 2 y 5 citas dependiendo de los procedimientos incluidos (blanqueamiento, carillas, coronas). Puedes ver el resultado esperado antes de comenzar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Con qué frecuencia debo ir al dentista?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Recomendamos visitas de control y limpieza profesional cada 6 meses. Si usas ortodoncia, las revisiones son mensuales.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Desde qué edad mis hijos deben ir al dentista?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La primera visita debe ser cuando aparezca el primer diente, aproximadamente al año de vida. Las revisiones regulares desde temprana edad previenen caries y detectan problemas de mordida.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Ofrecen financiamiento para los tratamientos dentales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sí, contamos con planes de pago flexibles. Aceptamos tarjetas de crédito y débito, y ofrecemos cuotas sin intereses en tratamientos seleccionados.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Atienden emergencias dentales?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutamente. Atendemos urgencias en ambas sedes de lunes a sábado. Para una atención prioritaria, escríbenos por WhatsApp con la palabra URGENCIA.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: BASE_URL,
+    },
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  name: "Clínica Dental Uchuya Premium",
+  url: BASE_URL,
+  description: "Clínica dental premium en Tingo María y Aucayacu, Perú.",
+  inLanguage: "es-PE",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE_URL}/?s={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -82,56 +306,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es-PE" className="scroll-smooth">
       <head>
-        {/* Structured data – Local Business */}
+        {/* ── Preconnect para fuentes y recursos externos ── */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+        <link rel="dns-prefetch" href="https://wa.me" />
+
+        {/* ── Structured Data (JSON-LD) ──────────────────── */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Dentist",
-              name: "Clínica Dental Uchuya Premium",
-              image: `${BASE_URL}/hero.png`,
-              url: BASE_URL,
-              telephone: "+51900755788",
-              priceRange: "$$",
-              address: [
-                {
-                  "@type": "PostalAddress",
-                  streetAddress: "Av. Alameda Perú 425",
-                  addressLocality: "Tingo María",
-                  postalCode: "10131",
-                  addressCountry: "PE",
-                },
-                {
-                  "@type": "PostalAddress",
-                  streetAddress: "Av. Lima 455",
-                  addressLocality: "Aucayacu",
-                  postalCode: "10171",
-                  addressCountry: "PE",
-                },
-              ],
-              sameAs: [
-                "https://www.facebook.com/share/1Cf85rz4B8/",
-                "https://www.instagram.com/clinicadentaluchuya_premium",
-                "https://www.tiktok.com/@uchuya_dental_premium",
-              ],
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                  opens: "09:00",
-                  closes: "20:00",
-                },
-              ],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

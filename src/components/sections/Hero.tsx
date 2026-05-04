@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.png"
+          src="/hero.webp"
           alt="Clínica Dental Uchuya Premium - Instalaciones"
           fill
           className="object-cover"
@@ -64,7 +64,7 @@ const Hero = () => {
             <span className="relative">
               <span className="text-gold-gradient">Perfecta</span>
             </span>{" "}
-            te está esperando
+            te espera aquí
           </motion.h1>
 
           {/* Sub-copy */}
@@ -74,7 +74,9 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="text-xl text-white/80 mb-10 leading-relaxed max-w-xl"
           >
-            Somos la clínica dental de referencia en la Selva Central. Combinamos tecnología de vanguardia con la calidez humana que mereces.
+            El dentista de confianza en Tingo María y Aucayacu. Diseño de sonrisa,
+            implantes, ortodoncia y blanqueamiento con tecnología de vanguardia y{" "}
+            <strong className="text-gold-light">atención personalizada desde el primer día</strong>.
           </motion.p>
 
           {/* CTA Buttons */}
