@@ -71,6 +71,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: { canonical: BASE_URL },
+  icons: {
+    icon: "/logouchuya.png",
+  },
 };
 
 export default function RootLayout({

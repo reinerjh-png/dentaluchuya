@@ -120,7 +120,7 @@ const Testimonials = () => {
             <span className="text-gold-dark">Transformaron</span> su Vida
           </motion.h2>
           <p className="text-gray-500 text-lg">
-            Más de 5,000 sonrisas felices nos respaldan. Estas son algunas de sus historias.
+            Más de 10,000 sonrisas felices nos respaldan. Estas son algunas de sus historias.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ const Testimonials = () => {
           className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-16"
         >
           {[
-            { value: "5,000+", label: "Pacientes Atendidos" },
+            { value: "10,000+", label: "Pacientes Atendidos" },
             { value: "4.9★", label: "Calificación Promedio" },
             { value: "98%", label: "Índice de Satisfacción" },
           ].map((stat) => (

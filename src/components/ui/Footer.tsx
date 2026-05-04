@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
 // Social icons — lucide-react doesn't export Facebook/Instagram/TikTok
 const FacebookIcon = () => (
@@ -111,9 +111,16 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-gray-400 mb-8 leading-relaxed text-sm">
+            <p className="text-gray-400 mb-6 leading-relaxed text-sm">
               Líderes en odontología estética y salud dental premium en la Selva Central. Tecnología de vanguardia y atención que transforma vidas.
             </p>
+
+            <div className="flex items-center gap-2 text-gray-400 text-sm mb-8">
+              <Mail size={16} className="text-gold shrink-0" />
+              <a href="mailto:admidentaluchuya@gmail.com" className="hover:text-gold transition-colors">
+                admidentaluchuya@gmail.com
+              </a>
+            </div>
 
             {/* Social icons */}
             <div className="flex gap-3">
@@ -199,7 +206,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="pt-10 border-t border-gray-800/60 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs">
-          <p>© {new Date().getFullYear()} Clínica Dental Uchuya Premium. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Clínica Dental Uchuya Premium de Mailyng. Desarrollado por <a href="https://www.linkedin.com/in/reiner-jairo-jim%C3%A9nez-huaman-9234a9388/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">Reiner Jimenez</a>. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white transition-colors">
               Términos y Condiciones

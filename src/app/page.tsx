@@ -13,7 +13,7 @@ import { Shield, Star, Users, Award, CheckCircle } from "lucide-react";
 const TRUST_BADGES = [
   { icon: Shield, text: "Garantía Total", sub: "Tratamientos seguros y certificados" },
   { icon: Star, text: "4.9 / 5 Estrellas", sub: "En Google y Facebook" },
-  { icon: Users, text: "5,000 Pacientes", sub: "Sonrisas transformadas" },
+  { icon: Users, text: "10,000 Pacientes", sub: "Sonrisas transformadas" },
   { icon: Award, text: "Tecnología TOP", sub: "Equipos de última generación" },
 ];
 
@@ -162,11 +162,11 @@ export default function Home() {
         <FAQ />
       </div>
 
-      {/* ── 9. SEDES ────────────────────────────────── */}
-      <Locations />
-
-      {/* ── 10. FORMULARIO DE CONTACTO ──────────────── */}
+      {/* ── 9. FORMULARIO DE CONTACTO ──────────────── */}
       <ContactForm />
+
+      {/* ── 10. SEDES ────────────────────────────────── */}
+      <Locations />
     </div>
   );
 }

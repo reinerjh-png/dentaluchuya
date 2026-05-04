@@ -31,7 +31,7 @@ const GALLERY_ITEMS = [
     size: "col-span-1 row-span-1",
   },
   {
-    src: "/ortodoncia_v2.png",
+    src: "/ortodoncia_v3.png",
     alt: "Ortodoncia y Brackets",
     label: "Ortodoncia",
     size: "col-span-1 row-span-1",
@@ -132,30 +132,6 @@ const Gallery = () => {
                 <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
               </svg>
               Facebook
-            </a>
-            <a
-              href="https://www.instagram.com/clinicadentaluchuya_premium"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform opacity-90 hover:opacity-100"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-              Instagram
-            </a>
-            <a
-              href="https://www.tiktok.com/@uchuya_dental_premium"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform opacity-90 hover:opacity-100"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-              </svg>
-              TikTok
             </a>
           </div>
         </motion.div>

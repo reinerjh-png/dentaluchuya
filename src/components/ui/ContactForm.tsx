@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const formSchema = z.object({
   name:    z.string().min(3, "El nombre debe tener al menos 3 caracteres"),
-  phone:   z.string().min(9, "Ingresa un teléfono válido (mín. 9 dígitos)"),
+  phone:   z.string().regex(/^[0-9]{9}$/, "El teléfono debe tener exactamente 9 números"),
   sede:    z.string().min(1, "Selecciona una sede"),
   service: z.string().min(1, "Selecciona un servicio"),
   date:    z.string().min(1, "Selecciona una fecha preferida"),
@@ -185,7 +185,16 @@ const ContactForm = () => {
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-sm font-bold text-gray-700">Teléfono / WhatsApp *</label>
-                    <input {...register("phone")} placeholder="999 999 999" type="tel" className={inputClass} />
+                    <input 
+                      {...register("phone")} 
+                      placeholder="999999999" 
+                      type="tel" 
+                      maxLength={9}
+                      onInput={(e) => {
+                        e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
+                      }}
+                      className={inputClass} 
+                    />
                     {errors.phone && <p className="text-red-500 text-xs">{errors.phone.message}</p>}
                   </div>
                 </div>
