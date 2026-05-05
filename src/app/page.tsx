@@ -5,13 +5,13 @@ import Link from "next/link";
 import { Shield, Star, Users, Award, CheckCircle } from "lucide-react";
 
 // Below-the-fold sections loaded lazily — they only download when needed
-const Services     = dynamic(() => import("@/components/sections/Services"));
-const Gallery      = dynamic(() => import("@/components/sections/Gallery"));
-const Team         = dynamic(() => import("@/components/sections/Team"));
+const Services = dynamic(() => import("@/components/sections/Services"));
+const Gallery = dynamic(() => import("@/components/sections/Gallery"));
+const Team = dynamic(() => import("@/components/sections/Team"));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
-const FAQ          = dynamic(() => import("@/components/sections/FAQ"));
-const ContactForm  = dynamic(() => import("@/components/ui/ContactForm"));
-const Locations    = dynamic(() => import("@/components/sections/Locations"));
+const FAQ = dynamic(() => import("@/components/sections/FAQ"));
+const ContactForm = dynamic(() => import("@/components/ui/ContactForm"));
+const Locations = dynamic(() => import("@/components/sections/Locations"));
 
 const TRUST_BADGES = [
   { icon: Shield, text: "Garantía Total", sub: "Tratamientos seguros y certificados" },
@@ -59,7 +59,7 @@ export default function Home() {
       <section
         id="nosotros"
         className="py-12 md:py-24 bg-white overflow-hidden"
-        aria-label="Sobre la Clínica Dental Uchuya Premium"
+        aria-label="Sobre la Clínica Dental Uchuya Premium de Mailyng"
         itemScope
         itemType="https://schema.org/MedicalOrganization"
       >
@@ -70,7 +70,7 @@ export default function Home() {
               <div className="relative w-full aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none">
                 <Image
                   src="/druchuya.webp"
-                  alt="Dr. Fernando Uchuya – Odontólogo Principal y Director Médico de la Clínica Dental Uchuya Premium en Tingo María"
+                  alt="Dr. Fernando Uchuya – Odontólogo Principal y Director Médico de la Clínica Dental Uchuya Premium de Mailyng en Tingo María"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -107,7 +107,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-gray-600 text-base md:text-lg leading-relaxed mb-7 md:mb-10">
                 <p itemProp="description">
-                  La <strong className="text-gray-900">Clínica Dental Uchuya Premium</strong> es el
+                  La <strong className="text-gray-900">Clínica Dental Uchuya Premium de Mailyng</strong> es el
                   centro odontológico líder en Tingo María, Aucayacu y toda la región de Huánuco.
                   Con más de una década atendiendo a familias de la Selva Central, combinamos
                   tecnología de vanguardia con la calidez humana que mereces.
@@ -116,7 +116,7 @@ export default function Home() {
                   Desde diseños de sonrisa hasta implantes dentales y ortodoncia, somos el único
                   centro en la región que ofrece todos los tratamientos bajo un mismo techo, con
                   especialistas certificados y equipos digitales de última generación. Agenda hoy
-                  tu <strong className="text-gray-900">evaluación gratuita</strong> en cualquiera
+                  tu <strong className="text-gray-900">evaluación profesional</strong> en cualquiera
                   de nuestras dos sedes.
                 </p>
               </div>

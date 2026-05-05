@@ -8,7 +8,7 @@ import { X, ZoomIn } from "lucide-react";
 const GALLERY_ITEMS = [
   {
     src: "/hero.webp",
-    alt: "Instalaciones modernas de la Clínica Dental Uchuya Premium en Tingo María, Huánuco",
+    alt: "Instalaciones modernas de la Clínica Dental Uchuya Premium de Mailyng en Tingo María, Huánuco",
     label: "Clínica Principal",
     size: "col-span-2 row-span-2",
   },
@@ -20,13 +20,13 @@ const GALLERY_ITEMS = [
   },
   {
     src: "/druchuya.webp",
-    alt: "Dr. Fernando Uchuya, odontólogo principal y director médico de la Clínica Dental Uchuya Premium en Tingo María",
+    alt: "Dr. Fernando Uchuya, odontólogo principal y director médico de la Clínica Dental Uchuya Premium de Mailyng en Tingo María",
     label: "Odontólogo Principal",
     size: "col-span-1 row-span-1",
   },
   {
     src: "/diseñosonrisa.webp",
-    alt: "Diseño de sonrisa realizado en la Clínica Dental Uchuya Premium – tratamiento de carillas en Tingo María",
+    alt: "Diseño de sonrisa realizado en la Clínica Dental Uchuya Premium de Mailyng – tratamiento de carillas en Tingo María",
     label: "Diseño de Sonrisa",
     size: "col-span-1 row-span-1",
   },
@@ -38,7 +38,7 @@ const GALLERY_ITEMS = [
   },
   {
     src: "/evaluacion.webp",
-    alt: "Evaluación dental gratuita en la Clínica Dental Uchuya Premium, Tingo María",
+    alt: "Evaluación dental gratuita en la Clínica Dental Uchuya Premium de Mailyng, Tingo María",
     label: "Evaluación Gratuita",
     size: "col-span-1 row-span-1",
   },
@@ -50,7 +50,7 @@ const GALLERY_ITEMS = [
   },
   {
     src: "/hero.webp",
-    alt: "Tecnología digital de diagnóstico dental 3D en la Clínica Dental Uchuya Premium, Huánuco",
+    alt: "Tecnología digital de diagnóstico dental 3D en la Clínica Dental Uchuya Premium de Mailyng, Huánuco",
     label: "Tecnología 3D",
     size: "col-span-2 row-span-1",
   },

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Clínica Dental Uchuya Premium",
+    name: "Clínica Dental Uchuya Premium de Mailyng",
     short_name: "Dental Uchuya",
     description:
       "Especialistas en diseño de sonrisa, implantes, ortodoncia y blanqueamiento dental en Tingo María y Aucayacu, Perú.",

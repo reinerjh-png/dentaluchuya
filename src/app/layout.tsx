@@ -23,12 +23,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "Clínica Dental Uchuya Premium | Dentista en Tingo María y Aucayacu – Perú",
-    template: "%s | Clínica Dental Uchuya Premium",
+    default: "Clínica Dental Uchuya Premium de Mailyng | Dentista en Tingo María y Aucayacu – Perú",
+    template: "%s | Clínica Dental Uchuya Premium de Mailyng",
   },
 
   description:
-    "Clínica Dental Uchuya Premium: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Primera evaluación GRATIS. Llama al +51 900 755 788.",
+    "Clínica Dental Uchuya Premium de Mailyng: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Primera evaluación GRATIS. Llama al +51 900 755 788.",
 
   keywords: [
     // Marca
@@ -64,11 +64,11 @@ export const metadata: Metadata = {
   ],
 
   authors: [
-    { name: "Clínica Dental Uchuya Premium", url: BASE_URL },
+    { name: "Clínica Dental Uchuya Premium de Mailyng", url: BASE_URL },
     { name: "Dr. Fernando Uchuya" },
   ],
-  creator: "Clínica Dental Uchuya Premium",
-  publisher: "Clínica Dental Uchuya Premium",
+  creator: "Clínica Dental Uchuya Premium de Mailyng",
+  publisher: "Clínica Dental Uchuya Premium de Mailyng",
 
   category: "health",
 
@@ -76,8 +76,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_PE",
     url: BASE_URL,
-    siteName: "Clínica Dental Uchuya Premium",
-    title: "Clínica Dental Uchuya Premium | Transforma tu Sonrisa en Tingo María",
+    siteName: "Clínica Dental Uchuya Premium de Mailyng",
+    title: "Clínica Dental Uchuya Premium de Mailyng | Transforma tu Sonrisa en Tingo María",
     description:
       "Especialistas en odontología estética y salud dental premium en Tingo María y Aucayacu, Perú. Diseño de sonrisa, implantes, ortodoncia, blanqueamiento. ¡Primera evaluación gratuita!",
     images: [
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
         url: "/hero.webp",
         width: 1200,
         height: 630,
-        alt: "Clínica Dental Uchuya Premium – Instalaciones modernas en Tingo María",
+        alt: "Clínica Dental Uchuya Premium de Mailyng – Instalaciones modernas en Tingo María",
         type: "image/webp",
       },
     ],
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Clínica Dental Uchuya Premium | Tingo María & Aucayacu",
+    title: "Clínica Dental Uchuya Premium de Mailyng | Tingo María & Aucayacu",
     description:
       "Diseño de sonrisa, implantes, ortodoncia y más. Primera evaluación GRATIS. ¡Transforma tu sonrisa hoy!",
     images: ["/hero.webp"],
@@ -133,7 +133,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Dentist",
   "@id": `${BASE_URL}/#dentist`,
-  name: "Clínica Dental Uchuya Premium",
+  name: "Clínica Dental Uchuya Premium de Mailyng",
   alternateName: "Dental Uchuya",
   description:
     "Clínica dental de alta especialidad con dos sedes en la Selva Central del Perú. Ofrecemos diseño de sonrisa, implantes dentales, ortodoncia, blanqueamiento, odontopediatría y rehabilitación oral.",
@@ -286,7 +286,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${BASE_URL}/#website`,
-  name: "Clínica Dental Uchuya Premium",
+  name: "Clínica Dental Uchuya Premium de Mailyng",
   url: BASE_URL,
   description: "Clínica dental premium en Tingo María y Aucayacu, Perú.",
   inLanguage: "es-PE",

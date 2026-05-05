@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero.webp"
-          alt="Clínica Dental Uchuya Premium - Instalaciones"
+          alt="Clínica Dental Uchuya Premium de Mailyng - Instalaciones"
           fill
           className="object-cover"
           priority
