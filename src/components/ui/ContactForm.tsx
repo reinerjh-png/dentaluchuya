@@ -63,11 +63,13 @@ const ContactForm = () => {
       setIsSuccess(true);
       reset();
 
-      // Redirect to WhatsApp after 2 sec
+      // On mobile, window.open inside async/setTimeout is often blocked by popup blockers.
+      // window.location.href is much more reliable for deep-linking to the WhatsApp app.
+      window.location.href = json.waUrl;
+      
       setTimeout(() => {
-        window.open(json.waUrl, "_blank");
         setIsSuccess(false);
-      }, 2000);
+      }, 3000);
     } catch {
       setApiError("Error de conexión. Por favor intenta de nuevo.");
     } finally {
