@@ -58,13 +58,13 @@ export default function Home() {
       {/* ── 4. SOBRE NOSOTROS ───────────────────────── */}
       <section
         id="nosotros"
-        className="py-24 bg-white overflow-hidden"
+        className="py-12 md:py-24 bg-white overflow-hidden"
         aria-label="Sobre la Clínica Dental Uchuya Premium"
         itemScope
         itemType="https://schema.org/MedicalOrganization"
       >
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16 xl:gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16 xl:gap-24">
             {/* Image side */}
             <div className="lg:w-1/2 relative">
               <div className="relative w-full aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none">
@@ -79,8 +79,8 @@ export default function Home() {
                 />
               </div>
 
-              {/* Floating quote badge */}
-              <div className="absolute -bottom-6 -right-4 lg:-right-10 bg-white p-6 rounded-[36px] shadow-2xl border border-gray-100 max-w-[220px]">
+              {/* Floating quote badge — hidden on mobile to prevent overflow */}
+              <div className="hidden md:block absolute -bottom-6 -right-4 lg:-right-10 bg-white p-6 rounded-[36px] shadow-2xl border border-gray-100 max-w-[220px]">
                 <p className="text-gold font-bold text-sm mb-2 italic leading-relaxed">
                   &ldquo;Mi compromiso es devolverte la confianza de sonreír&rdquo;
                 </p>
@@ -88,8 +88,8 @@ export default function Home() {
                 <p className="text-gray-400 text-[10px]">Odontólogo Principal</p>
               </div>
 
-              {/* Experience badge */}
-              <div className="absolute -top-6 -left-4 lg:-left-8 bg-gold-gradient text-white p-5 rounded-3xl shadow-xl">
+              {/* Experience badge — hidden on mobile to prevent overflow */}
+              <div className="hidden md:block absolute -top-6 -left-4 lg:-left-8 bg-gold-gradient text-white p-5 rounded-3xl shadow-xl">
                 <p className="text-3xl font-bold leading-none">10+</p>
                 <p className="text-xs font-semibold opacity-80">Años de<br />experiencia</p>
               </div>
@@ -100,12 +100,12 @@ export default function Home() {
               <span className="text-gold font-bold tracking-[0.2em] uppercase text-sm">
                 Sobre Nosotros
               </span>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-8 leading-tight" itemProp="name">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mt-4 mb-5 md:mb-8 leading-tight" itemProp="name">
                 El Mejor Dentista{" "}
                 <span className="text-gold-dark">en Tingo María</span>{" "}
                 y Aucayacu
               </h2>
-              <div className="space-y-5 text-gray-600 text-lg leading-relaxed mb-10">
+              <div className="space-y-4 text-gray-600 text-base md:text-lg leading-relaxed mb-7 md:mb-10">
                 <p itemProp="description">
                   La <strong className="text-gray-900">Clínica Dental Uchuya Premium</strong> es el
                   centro odontológico líder en Tingo María, Aucayacu y toda la región de Huánuco.
@@ -122,7 +122,7 @@ export default function Home() {
               </div>
 
               {/* Checklist */}
-              <ul className="space-y-3 mb-12">
+              <ul className="space-y-3 mb-7 md:mb-12">
                 {[
                   "La única clínica con 2 sedes en Tingo María y Aucayacu",
                   "Especialistas certificados con atención sin listas de espera",
@@ -154,7 +154,7 @@ export default function Home() {
 
               <Link
                 href="#contacto"
-                className="inline-flex items-center gap-2 bg-gold-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform premium-shadow"
+                className="flex md:inline-flex items-center justify-center gap-2 bg-gold-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform premium-shadow"
               >
                 Agenda tu evaluación hoy
               </Link>

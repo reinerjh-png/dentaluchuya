@@ -31,7 +31,7 @@ const SEDES = [
 const Locations = () => {
 
   return (
-    <section id="sedes" className="py-24 bg-gray-50">
+    <section id="sedes" className="py-12 md:py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -63,7 +63,7 @@ const Locations = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
           {SEDES.map((sede, index) => (
             <motion.div
               key={sede.name}

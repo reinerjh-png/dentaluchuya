@@ -44,9 +44,9 @@ const SERVICES = [
 
 const Services = () => {
   return (
-    <section id="servicios" className="py-24 bg-gray-50 overflow-hidden">
+    <section id="servicios" className="py-12 md:py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-20">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -85,7 +85,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-10 rounded-3xl premium-shadow hover:translate-y-[-10px] transition-all duration-300 group border border-gray-100"
+              className="bg-white p-6 md:p-10 rounded-3xl premium-shadow hover:translate-y-[-10px] transition-all duration-300 group border border-gray-100"
             >
               <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-gold-gradient transition-colors">
                 <service.icon className="text-gold group-hover:text-white transition-colors" size={32} />

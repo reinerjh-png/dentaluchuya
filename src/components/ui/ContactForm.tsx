@@ -81,18 +81,18 @@ const ContactForm = () => {
     "w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all bg-white text-gray-900 placeholder:text-gray-400";
 
   return (
-    <section id="contacto" className="py-24 bg-white relative overflow-hidden">
+    <section id="contacto" className="py-12 md:py-24 bg-white relative overflow-hidden">
       {/* Decorative bg shape */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gold/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-gold font-bold tracking-[0.2em] uppercase text-sm">
             Reserva Online
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mt-4">
-            Agenda tu <span className="text-gold-dark">Evaluación Gratuita</span>
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mt-4">
+            Agenda tu <span className="text-gold-dark">Cita</span>
           </h2>
           <p className="text-gray-500 mt-4 text-lg max-w-xl mx-auto">
             Completa el formulario y te contactaremos en menos de 30 minutos para confirmar tu cita.

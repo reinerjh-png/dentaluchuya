@@ -61,15 +61,15 @@ const Gallery = () => {
   const [lightboxAlt, setLightboxAlt] = useState("");
 
   return (
-    <section id="galeria" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="galeria" className="py-12 md:py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-16 gap-4 md:gap-6">
           <div className="max-w-2xl">
             <span className="text-gold font-bold tracking-[0.2em] uppercase text-sm">
               Galería
             </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mt-4">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mt-4">
               Nuestros <span className="text-gold-dark">Resultados</span> &amp; Clínica
             </h2>
           </div>

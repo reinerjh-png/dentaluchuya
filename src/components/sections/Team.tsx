@@ -46,7 +46,7 @@ const TEAM = [
 
 const Team = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-12 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -62,7 +62,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading font-bold mt-4 mb-6"
+            className="text-3xl md:text-5xl font-heading font-bold mt-4 mb-6"
           >
             Nuestros Dentistas en{" "}
             <span className="text-gold-dark">Tingo María y Aucayacu</span>
@@ -85,7 +85,7 @@ const Team = () => {
               className="group relative"
             >
               {/* Image Container */}
-              <div className="relative h-[420px] rounded-[40px] overflow-hidden mb-8">
+              <div className="relative h-[300px] md:h-[420px] rounded-[40px] overflow-hidden mb-6 md:mb-8">
                 <Image
                   src={member.image}
                   alt={member.imageAlt}

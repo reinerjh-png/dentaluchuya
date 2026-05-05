@@ -58,7 +58,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.1] mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.1] mb-4 md:mb-6"
           >
             Tu Sonrisa{" "}
             <span className="relative">
@@ -72,7 +72,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-xl text-white/80 mb-10 leading-relaxed max-w-xl"
+            className="text-base md:text-xl text-white/80 mb-8 md:mb-10 leading-relaxed max-w-xl"
           >
             El dentista de confianza en Tingo María y Aucayacu. Diseño de sonrisa,
             implantes, ortodoncia y blanqueamiento con tecnología de vanguardia y{" "}
@@ -84,7 +84,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-16"
           >
             <Link
               href="#contacto"
