@@ -7,8 +7,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-      {/* Background Image */}
+    <section className="relative h-[100svh] min-h-[850px] md:min-h-[700px] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero.webp"
@@ -133,7 +132,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="hidden md:block absolute bottom-10 right-6 lg:right-16 z-10"
+        className="absolute bottom-10 left-4 md:left-auto md:right-6 lg:right-16 z-10"
       >
         <motion.div
           animate={{ y: [0, -8, 0] }}
