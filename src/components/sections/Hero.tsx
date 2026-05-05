@@ -107,7 +107,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex items-center gap-6 flex-wrap"
+            className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6"
           >
             {/* Star rating */}
             <div className="flex items-center gap-2">
@@ -118,20 +118,22 @@ const Hero = () => {
               </div>
               <span className="text-white/80 text-sm font-semibold">4.9/5 · +500 reseñas</span>
             </div>
-            <div className="w-px h-4 bg-white/30" />
-            <span className="text-white/70 text-sm">✓ Sin lista de espera</span>
-            <div className="w-px h-4 bg-white/30 hidden sm:block" />
-            <span className="text-white/70 text-sm hidden sm:block">✓ Respuesta inmediata</span>
+            <div className="hidden sm:block w-px h-4 bg-white/30" />
+            <div className="flex items-center gap-4">
+              <span className="text-white/70 text-sm">✓ Sin lista de espera</span>
+              <div className="w-px h-4 bg-white/30" />
+              <span className="text-white/70 text-sm">✓ Respuesta inmediata</span>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Floating card — bottom right */}
+      {/* Floating card — bottom right, hidden on mobile to avoid overlapping WhatsApp button */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="absolute bottom-10 right-6 lg:right-16 z-10"
+        className="hidden md:block absolute bottom-10 right-6 lg:right-16 z-10"
       >
         <motion.div
           animate={{ y: [0, -8, 0] }}
