@@ -66,7 +66,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16 xl:gap-24">
             {/* Image side */}
-            <div className="lg:w-1/2 relative">
+            <div className="w-full lg:w-1/2 relative">
               <div className="relative w-full aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none">
                 <Image
                   src="/druchuya.webp"
