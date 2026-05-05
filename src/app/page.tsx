@@ -79,18 +79,18 @@ export default function Home() {
                 />
               </div>
 
-              {/* Floating quote badge — hidden on mobile to prevent overflow */}
-              <div className="hidden md:block absolute -bottom-6 -right-4 lg:-right-10 bg-white p-6 rounded-[36px] shadow-2xl border border-gray-100 max-w-[220px]">
-                <p className="text-gold font-bold text-sm mb-2 italic leading-relaxed">
+              {/* Floating quote badge */}
+              <div className="absolute bottom-4 right-3 md:-bottom-6 md:-right-4 lg:-right-10 bg-white p-4 md:p-6 rounded-[28px] md:rounded-[36px] shadow-2xl border border-gray-100 max-w-[180px] md:max-w-[220px]">
+                <p className="text-gold font-bold text-xs md:text-sm mb-1 md:mb-2 italic leading-relaxed">
                   &ldquo;Mi compromiso es devolverte la confianza de sonreír&rdquo;
                 </p>
                 <p className="text-gray-900 font-bold text-xs">Dr. Fernando Uchuya</p>
                 <p className="text-gray-400 text-[10px]">Odontólogo Principal</p>
               </div>
 
-              {/* Experience badge — hidden on mobile to prevent overflow */}
-              <div className="hidden md:block absolute -top-6 -left-4 lg:-left-8 bg-gold-gradient text-white p-5 rounded-3xl shadow-xl">
-                <p className="text-3xl font-bold leading-none">10+</p>
+              {/* Experience badge */}
+              <div className="absolute top-4 left-3 md:-top-6 md:-left-4 lg:-left-8 bg-gold-gradient text-white p-3 md:p-5 rounded-2xl md:rounded-3xl shadow-xl">
+                <p className="text-2xl md:text-3xl font-bold leading-none">10+</p>
                 <p className="text-xs font-semibold opacity-80">Años de<br />experiencia</p>
               </div>
             </div>
