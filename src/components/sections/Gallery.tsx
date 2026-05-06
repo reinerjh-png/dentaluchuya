@@ -60,6 +60,7 @@ const GALLERY_ITEMS = [
 const Gallery = () => {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [lightboxAlt, setLightboxAlt] = useState("");
+  const [lightboxLabel, setLightboxLabel] = useState("");
 
   return (
     <section id="galeria" className="py-12 md:py-24 bg-white">
@@ -91,6 +92,7 @@ const Gallery = () => {
               onClick={() => {
                 setLightboxSrc(item.src);
                 setLightboxAlt(item.alt);
+                setLightboxLabel(item.label);
               }}
               className={`${item.size} relative overflow-hidden rounded-3xl group cursor-pointer`}
             >
@@ -158,16 +160,25 @@ const Gallery = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden"
+              className="flex flex-col items-center w-full max-w-4xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={lightboxSrc}
-                alt={lightboxAlt}
-                fill
-                className="object-contain"
-                sizes="100vw"
-              />
+              {/* Image container: tall on mobile, aspect-video on desktop */}
+              <div className="relative w-full h-[75svh] md:h-auto md:aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src={lightboxSrc}
+                  alt={lightboxAlt}
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                />
+              </div>
+              {/* Label shown on mobile; desktop already shows it on hover */}
+              {lightboxLabel && (
+                <span className="mt-4 text-white font-bold text-base tracking-wider uppercase md:hidden">
+                  {lightboxLabel}
+                </span>
+              )}
             </motion.div>
           </motion.div>
         )}
