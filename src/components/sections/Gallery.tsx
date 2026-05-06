@@ -7,7 +7,7 @@ import { X, ZoomIn } from "lucide-react";
 
 const GALLERY_ITEMS = [
   {
-    src: "/clinicap.webp",
+    src: "/clinicaprin.webp",
     alt: "Instalaciones modernas de la Clínica Dental Uchuya Premium de Mailyng en Tingo María, Huánuco",
     label: "Clínica Principal",
     size: "col-span-2 row-span-2",
