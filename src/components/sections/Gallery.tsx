@@ -7,7 +7,7 @@ import { X, ZoomIn } from "lucide-react";
 
 const GALLERY_ITEMS = [
   {
-    src: "/hero.webp",
+    src: "/clinicap.webp",
     alt: "Instalaciones modernas de la Clínica Dental Uchuya Premium de Mailyng en Tingo María, Huánuco",
     label: "Clínica Principal",
     size: "col-span-2 row-span-2",
@@ -49,9 +49,9 @@ const GALLERY_ITEMS = [
     size: "col-span-1 row-span-1",
   },
   {
-    src: "/hero.webp",
+    src: "/tec3d.webp",
     alt: "Tecnología digital de diagnóstico dental 3D en la Clínica Dental Uchuya Premium de Mailyng, Huánuco",
-    label: "Tecnología 3D",
+    label: "Clientes contentos",
     size: "col-span-2 row-span-1",
   },
 ];
@@ -98,7 +98,7 @@ const Gallery = () => {
                 alt={item.alt}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="(max-width: 768px) 50vw, 25vw"
+                sizes={item.size.includes("col-span-2") ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 50vw, 25vw"}
               />
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-6">
