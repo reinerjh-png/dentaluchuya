@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
+import AudioPlayer from "@/components/ui/AudioPlayer";
 import Image from "next/image";
 import Link from "next/link";
 import { Shield, Star, Users, Award, CheckCircle } from "lucide-react";
@@ -25,6 +26,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* ── 1. HERO ─────────────────────────────────── */}
       <Hero />
+
+      {/* ── 1b. AUDIO PLAYER (presentación de la clínica) ── */}
+      <AudioPlayer />
 
       {/* ── 2. TRUST BAR ────────────────────────────── */}
       <div
