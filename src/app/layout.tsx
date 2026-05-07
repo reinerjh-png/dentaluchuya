@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Clínica Dental Uchuya Premium de Mailyng: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Primera evaluación GRATIS. Llama al +51 900 755 788.",
+    "Clínica Dental Uchuya Premium de Mailyng: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Llama al +51 900 755 788.",
 
   keywords: [
     // Marca
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     siteName: "Clínica Dental Uchuya Premium de Mailyng",
     title: "Clínica Dental Uchuya Premium de Mailyng | Transforma tu Sonrisa en Tingo María",
     description:
-      "Especialistas en odontología estética y salud dental premium en Tingo María y Aucayacu, Perú. Diseño de sonrisa, implantes, ortodoncia, blanqueamiento. ¡Primera evaluación gratuita!",
+      "Especialistas en odontología estética y salud dental premium en Tingo María y Aucayacu, Perú. Diseño de sonrisa, implantes, ortodoncia, blanqueamiento. ¡Agenda tu evaluación hoy!",
     images: [
       {
         url: "/hero.webp",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clínica Dental Uchuya Premium de Mailyng | Tingo María & Aucayacu",
     description:
-      "Diseño de sonrisa, implantes, ortodoncia y más. Primera evaluación GRATIS. ¡Transforma tu sonrisa hoy!",
+      "Diseño de sonrisa, implantes, ortodoncia y más. ¡Transforma tu sonrisa hoy!",
     images: ["/hero.webp"],
   },
 

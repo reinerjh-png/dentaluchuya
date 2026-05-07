@@ -8,11 +8,11 @@ import { Send, CheckCircle2, Loader2, Phone, MapPin, Clock } from "lucide-react"
 import { motion } from "framer-motion";
 
 const formSchema = z.object({
-  name:    z.string().min(3, "El nombre debe tener al menos 3 caracteres"),
-  phone:   z.string().regex(/^[0-9]{9}$/, "El teléfono debe tener exactamente 9 números"),
-  sede:    z.string().min(1, "Selecciona una sede"),
+  name: z.string().min(3, "El nombre debe tener al menos 3 caracteres"),
+  phone: z.string().regex(/^[0-9]{9}$/, "El teléfono debe tener exactamente 9 números"),
+  sede: z.string().min(1, "Selecciona una sede"),
   service: z.string().min(1, "Selecciona un servicio"),
-  date:    z.string().min(1, "Selecciona una fecha preferida"),
+  date: z.string().min(1, "Selecciona una fecha preferida"),
   message: z.string().optional(),
 });
 
@@ -66,7 +66,7 @@ const ContactForm = () => {
       // On mobile, window.open inside async/setTimeout is often blocked by popup blockers.
       // window.location.href is much more reliable for deep-linking to the WhatsApp app.
       window.location.href = json.waUrl;
-      
+
       setTimeout(() => {
         setIsSuccess(false);
       }, 3000);
@@ -101,27 +101,27 @@ const ContactForm = () => {
 
         <div className="max-w-5xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
           {/* ── Info Sidebar ─────────────────────────── */}
-          <div className="md:w-2/5 bg-gold-gradient p-10 md:p-12 text-white flex flex-col justify-between">
+          <div className="md:w-2/5 bg-gradient-to-br from-[#b8860b] to-[#d4af37] p-10 md:p-12 text-white flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-heading font-bold mb-4 leading-tight">
+              <h3 className="text-3xl md:text-4xl font-heading font-bold mb-3 leading-tight">
                 Tu sonrisa perfecta <br /> comienza aquí
               </h3>
-              <p className="text-white/80 mb-10 leading-relaxed">
+              <p className="text-white/90 mb-8 text-lg leading-relaxed">
                 Respuesta inmediata vía WhatsApp. Sin lista de espera.
               </p>
 
-              <ul className="space-y-5">
+              <ul className="space-y-3">
                 {[
-                  { icon: CheckCircle2, text: "Evaluación personalizada sin costo" },
+                  { icon: CheckCircle2, text: "Evaluación personalizada" },
                   { icon: CheckCircle2, text: "Tecnología digital de última generación" },
                   { icon: CheckCircle2, text: "Presupuesto transparente" },
                   { icon: CheckCircle2, text: "Planes de pago flexibles" },
                 ].map(({ icon: Icon, text }) => (
                   <li key={text} className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0">
-                      <Icon size={16} />
+                      <Icon size={18} />
                     </div>
-                    <span className="text-sm leading-snug">{text}</span>
+                    <span className="text-base font-medium leading-snug">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -187,15 +187,15 @@ const ContactForm = () => {
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-sm font-bold text-gray-700">Teléfono / WhatsApp *</label>
-                    <input 
-                      {...register("phone")} 
-                      placeholder="999999999" 
-                      type="tel" 
+                    <input
+                      {...register("phone")}
+                      placeholder="999999999"
+                      type="tel"
                       maxLength={9}
                       onInput={(e) => {
                         e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
                       }}
-                      className={inputClass} 
+                      className={inputClass}
                     />
                     {errors.phone && <p className="text-red-500 text-xs">{errors.phone.message}</p>}
                   </div>
@@ -260,7 +260,7 @@ const ContactForm = () => {
                   ) : (
                     <>
                       <Send size={20} />
-                      Reservar mi Cita Gratis
+                      Reservar mi Cita
                     </>
                   )}
                 </button>

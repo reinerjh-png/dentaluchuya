@@ -78,7 +78,7 @@ const Footer = () => {
               ¿Listo para transformar tu sonrisa?
             </h3>
             <p className="text-white/80 mt-1">
-              Primera evaluación completamente gratuita. Sin compromiso.
+              Da el primer paso hacia una sonrisa perfecta hoy mismo.
             </p>
           </div>
           <Link

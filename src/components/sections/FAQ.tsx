@@ -22,7 +22,7 @@ const FAQS = [
     category: "Duración",
     question: "¿Cuánto tiempo dura el tratamiento de ortodoncia?",
     answer:
-      "La duración depende de la complejidad del caso. En promedio, un tratamiento con brackets convencionales tarda entre 12 y 24 meses. Los casos leves pueden resolverse en 8-12 meses con alineadores invisibles. En tu evaluación gratuita te daremos un cronograma personalizado y realista.",
+      "La duración depende de la complejidad del caso. En promedio, un tratamiento con brackets convencionales tarda entre 12 y 24 meses. Los casos leves pueden resolverse en 8-12 meses con alineadores invisibles. En tu evaluación te daremos un cronograma personalizado y realista.",
   },
   {
     category: "Duración",
