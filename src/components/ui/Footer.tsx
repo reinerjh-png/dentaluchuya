@@ -70,25 +70,7 @@ const SEDES = [
 const Footer = () => {
   return (
     <footer className="bg-[#080808] text-white">
-      {/* Pre-footer CTA band */}
-      <div className="bg-gold-gradient">
-        <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-white">
-              ¿Listo para transformar tu sonrisa?
-            </h3>
-            <p className="text-white/80 mt-1">
-              Da el primer paso hacia una sonrisa perfecta hoy mismo.
-            </p>
-          </div>
-          <Link
-            href="#sedes"
-            className="shrink-0 bg-white text-gold-dark font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg whitespace-nowrap"
-          >
-            Agenda Ahora →
-          </Link>
-        </div>
-      </div>
+
 
       {/* Main footer body */}
       <div className="container mx-auto px-6 pt-20 pb-12">

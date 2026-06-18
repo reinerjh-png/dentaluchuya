@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { MapPin, Phone, Clock, ExternalLink, MessageCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const SEDES = [
   {
@@ -29,6 +30,7 @@ const SEDES = [
 ];
 
 const Locations = () => {
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <section id="sedes" className="py-12 md:py-24 bg-gray-50">
@@ -62,18 +64,39 @@ const Locations = () => {
           </motion.p>
         </div>
 
+        {/* Mobile Tabs */}
+        <div className="md:hidden flex gap-2 mb-8 bg-white p-2 rounded-2xl border border-gray-100 shadow-sm">
+          {SEDES.map((sede, index) => (
+            <button
+              key={sede.name}
+              onClick={() => setActiveTab(index)}
+              className={`flex-1 py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 text-center ${
+                activeTab === index
+                  ? "bg-gold text-white shadow-md"
+                  : "text-gray-600 hover:text-black hover:bg-gray-50"
+              }`}
+            >
+              {sede.name}
+            </button>
+          ))}
+        </div>
+
         {/* Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
           {SEDES.map((sede, index) => (
-            <motion.div
-              key={sede.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-[40px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
+            <div 
+              key={`wrapper-${sede.name}`}
+              className={index !== activeTab ? "hidden md:block" : "block"}
             >
-              {/* Card header strip */}
+              <motion.div
+                key={`${sede.name}-${activeTab === index ? 'active' : 'inactive'}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: activeTab === index ? 0 : index * 0.15, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-[40px] h-full overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
+              >
+                {/* Card header strip */}
               <div className={`bg-gradient-to-r ${sede.color} px-8 py-5 flex items-center justify-between`}>
                 <div>
                   <span className="text-white/70 text-xs font-bold uppercase tracking-widest">
@@ -156,7 +179,8 @@ const Locations = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
+              </motion.div>
+            </div>
           ))}
         </div>
       </div>
