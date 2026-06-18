@@ -32,7 +32,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Agendar Cita",
         short_name: "Cita",
         description: "Agenda tu evaluación",
-        url: "/#contacto",
+        url: "/#sedes",
       },
       {
         name: "Nuestras Sedes",

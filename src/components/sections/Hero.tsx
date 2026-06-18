@@ -86,7 +86,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-16"
           >
             <Link
-              href="#contacto"
+              href="#sedes"
               className="inline-flex items-center justify-center gap-2 bg-gold-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform premium-shadow"
             >
               Agenda tu cita

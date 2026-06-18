@@ -11,7 +11,7 @@ const Gallery = dynamic(() => import("@/components/sections/Gallery"));
 const Team = dynamic(() => import("@/components/sections/Team"));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
 const FAQ = dynamic(() => import("@/components/sections/FAQ"));
-const ContactForm = dynamic(() => import("@/components/ui/ContactForm"));
+
 const Locations = dynamic(() => import("@/components/sections/Locations"));
 
 const TRUST_BADGES = [
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
 
               <Link
-                href="#contacto"
+                href="#sedes"
                 className="flex md:inline-flex items-center justify-center gap-2 bg-gold-gradient text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform premium-shadow"
               >
                 Agenda tu evaluación hoy
@@ -193,10 +193,7 @@ export default function Home() {
         <FAQ />
       </div>
 
-      {/* ── 9. FORMULARIO DE CONTACTO ──────────────── */}
-      <div aria-label="Agendar cita en la clínica dental">
-        <ContactForm />
-      </div>
+
 
       {/* ── 10. SEDES ────────────────────────────────── */}
       <div aria-label="Ubicaciones de la clínica en Tingo María y Aucayacu">

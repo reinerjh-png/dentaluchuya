@@ -90,7 +90,7 @@ const Navbar = () => {
               900 755 788
             </a>
             <Link
-              href="#contacto"
+              href="#sedes"
               className="bg-gold-gradient text-white px-7 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform premium-shadow"
             >
               Agendar Cita
@@ -152,7 +152,7 @@ const Navbar = () => {
             {/* Mobile CTA */}
             <div className="px-10 pb-12 space-y-4">
               <Link
-                href="#contacto"
+                href="#sedes"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block w-full bg-gold-gradient text-white px-8 py-4 rounded-full font-bold text-lg text-center"
               >

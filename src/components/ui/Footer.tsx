@@ -47,7 +47,7 @@ const NAV_LINKS = [
   { name: "Equipo", href: "#equipo" },
   { name: "FAQ", href: "#faq" },
   { name: "Sedes", href: "#sedes" },
-  { name: "Contacto", href: "#contacto" },
+
 ];
 
 const SEDES = [
@@ -82,7 +82,7 @@ const Footer = () => {
             </p>
           </div>
           <Link
-            href="#contacto"
+            href="#sedes"
             className="shrink-0 bg-white text-gold-dark font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg whitespace-nowrap"
           >
             Agenda Ahora →
