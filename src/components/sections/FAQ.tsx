@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -59,6 +59,7 @@ const FAQS = [
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [activeCategory, setActiveCategory] = useState("Todos");
+  const shouldReduceMotion = useReducedMotion();
 
   const categories = ["Todos", ...Array.from(new Set(FAQS.map((f) => f.category)))];
 
@@ -133,10 +134,11 @@ const FAQ = () => {
               {filtered.map((faq, index) => (
                 <motion.div
                   key={faq.question}
-                  initial={{ opacity: 0, y: 10 }}
+                  layout
+                  initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ delay: index * 0.05 }}
+                  exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -10 }}
+                  transition={{ delay: shouldReduceMotion ? 0 : index * 0.05 }}
                   className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm"
                 >
                   {/* Category badge + Question */}
@@ -161,13 +163,16 @@ const FAQ = () => {
                       )}
                     />
                   </button>
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {openIndex === index && (
                       <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
+                        key="content"
+                        layout
+                        initial={{ opacity: 0, scaleY: shouldReduceMotion ? 1 : 0.95 }}
+                        animate={{ opacity: 1, scaleY: 1 }}
+                        exit={{ opacity: 0, scaleY: shouldReduceMotion ? 1 : 0.95 }}
+                        transition={{ duration: shouldReduceMotion ? 0 : 0.25, ease: "easeOut" }}
+                        style={{ originY: 0, overflow: "hidden" }}
                       >
                         <div className="px-6 pb-6 text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
                           {faq.answer}
