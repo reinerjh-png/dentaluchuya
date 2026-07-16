@@ -155,7 +155,7 @@ const Locations = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`Mapa de sede ${sede.name}`}
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                    sandbox="allow-scripts allow-popups allow-forms"
                   />
                 </div>
 
