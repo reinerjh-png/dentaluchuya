@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ChevronRight, Play, Star } from "lucide-react";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Animated background particles */}
       <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, i) => (
-          <motion.div
+          <m.div
             key={i}
             className="absolute w-1 h-1 rounded-full bg-gold/40"
             style={{
@@ -41,7 +41,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           {/* Pre-headline badge */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -50,10 +50,10 @@ const Hero = () => {
               <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
               Odontología Premium · Tingo María &amp; Aucayacu
             </span>
-          </motion.div>
+          </m.div>
 
           {/* Main heading */}
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -64,10 +64,10 @@ const Hero = () => {
               <span className="text-gold-gradient">Perfecta</span>
             </span>{" "}
             te espera aquí
-          </motion.h1>
+          </m.h1>
 
           {/* Sub-copy */}
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
@@ -76,10 +76,10 @@ const Hero = () => {
             El dentista de confianza en Tingo María y Aucayacu. Diseño de sonrisa,
             implantes, ortodoncia y blanqueamiento con tecnología de vanguardia y{" "}
             <strong className="text-gold-light">atención personalizada desde el primer día</strong>.
-          </motion.p>
+          </m.p>
 
           {/* CTA Buttons */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
@@ -99,10 +99,10 @@ const Hero = () => {
               <Play size={18} className="fill-white" />
               Ver Resultados
             </Link>
-          </motion.div>
+          </m.div>
 
           {/* Trust indicators */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
@@ -123,18 +123,18 @@ const Hero = () => {
               <div className="w-px h-4 bg-white/30" />
               <span className="text-white/70 text-sm">✓ Respuesta inmediata</span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 
       {/* Floating card — bottom right, hidden on mobile to avoid overlapping WhatsApp button */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
         className="absolute bottom-10 left-4 md:left-auto md:right-6 lg:right-16 z-10"
       >
-        <motion.div
+        <m.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="flex items-center gap-4 bg-white/10 backdrop-blur-lg p-5 rounded-2xl border border-white/20 shadow-2xl"
@@ -146,25 +146,25 @@ const Hero = () => {
             <p className="text-white font-bold text-sm">Años de Excelencia</p>
             <p className="text-white/60 text-xs">10,000+ pacientes atendidos</p>
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
 
       {/* Scroll indicator */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2"
       >
         <span className="text-white/50 text-xs uppercase tracking-widest">Scroll</span>
-        <motion.div
+        <m.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-5 h-8 border-2 border-white/30 rounded-full flex items-start justify-center p-1"
         >
           <div className="w-1.5 h-1.5 bg-white/60 rounded-full" />
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </section>
   );
 };

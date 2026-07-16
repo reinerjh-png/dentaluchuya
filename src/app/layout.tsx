@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import MotionProvider from "@/components/ui/MotionProvider";
 
 /** Serializa JSON-LD de forma segura escapando caracteres XSS (CVE)
  *  JSON.stringify NO escapa <, > ni & — un dato con <\/script> rompería el HTML.
@@ -343,10 +344,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
-        <Navbar />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <MotionProvider>
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </MotionProvider>
       </body>
     </html>
   );

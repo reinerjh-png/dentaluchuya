@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, Phone, Clock, ExternalLink, MessageCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 const SEDES = [
   {
@@ -37,23 +37,23 @@ const Locations = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.span
+          <m.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-gold font-bold tracking-[0.2em] uppercase text-sm"
           >
             Nuestras Ubicaciones
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold mt-4"
           >
             Estamos <span className="text-gold-dark">Cerca de Ti</span>
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -61,7 +61,7 @@ const Locations = () => {
             className="text-gray-500 mt-4 text-lg max-w-xl mx-auto"
           >
             Dos sedes para que tu atención dental premium esté siempre a mano, donde estés.
-          </motion.p>
+          </m.p>
         </div>
 
         {/* Mobile Tabs */}
@@ -89,7 +89,7 @@ const Locations = () => {
               key={`wrapper-${sede.name}`}
               className={index !== activeTab ? "hidden md:block" : "block"}
             >
-              <motion.div
+              <m.div
                 key={`${sede.name}-${activeTab === index ? 'active' : 'inactive'}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -155,6 +155,7 @@ const Locations = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`Mapa de sede ${sede.name}`}
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                   />
                 </div>
 
@@ -180,7 +181,7 @@ const Locations = () => {
                   </a>
                 </div>
               </div>
-              </motion.div>
+              </m.div>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Award } from "lucide-react";
 
 // lucide-react doesn't export Instagram — using inline SVG
@@ -50,15 +50,15 @@ const Team = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.span
+          <m.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-gold font-bold tracking-[0.2em] uppercase text-sm"
           >
             Nuestros Especialistas
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,7 +66,7 @@ const Team = () => {
           >
             Nuestros Dentistas en{" "}
             <span className="text-gold-dark">Tingo María y Aucayacu</span>
-          </motion.h2>
+          </m.h2>
           <p className="text-gray-500 text-lg leading-relaxed">
             Especialistas certificados con vocación de servicio, comprometidos con
             ofrecerte la mejor experiencia dental en la Selva Central del Perú.
@@ -76,7 +76,7 @@ const Team = () => {
         {/* Team Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {TEAM.map((member, index) => (
-            <motion.div
+            <m.div
               key={member.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ const Team = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

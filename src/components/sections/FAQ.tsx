@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { m, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -133,7 +133,7 @@ const FAQ = () => {
           <div className="space-y-4">
             <AnimatePresence mode="wait">
               {filtered.map((faq, index) => (
-                <motion.div
+                <m.div
                   key={faq.question}
                   layout
                   initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 10 }}
@@ -167,7 +167,7 @@ const FAQ = () => {
                   </button>
                   <AnimatePresence initial={false}>
                     {openIndex === index && (
-                      <motion.div
+                      <m.div
                         key="content"
                         layout
                         initial={{ opacity: 0, scaleY: shouldReduceMotion ? 1 : 0.95 }}
@@ -179,10 +179,10 @@ const FAQ = () => {
                         <div className="px-6 pb-6 text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
                           {faq.answer}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
-                </motion.div>
+                </m.div>
               ))}
             </AnimatePresence>
           </div>

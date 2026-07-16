@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Servicios", href: "#servicios" },
@@ -117,7 +117,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -139,7 +139,7 @@ const Navbar = () => {
             {/* Mobile links */}
             <div className="flex flex-col flex-1 items-start justify-center px-10 gap-8">
               {navLinks.map((link, i) => (
-                <motion.div
+                <m.div
                   key={link.name}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -152,7 +152,7 @@ const Navbar = () => {
                   >
                     {link.name}
                   </Link>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
@@ -173,7 +173,7 @@ const Navbar = () => {
                 +51 900 755 788
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

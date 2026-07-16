@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Sparkles, ShieldCheck, Heart, Zap, Star, UserCheck } from "lucide-react";
 
 const SERVICES = [
@@ -47,15 +47,15 @@ const Services = () => {
     <section id="servicios" className="py-12 md:py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-20">
-          <motion.span
+          <m.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-gold font-bold tracking-[0.2em] uppercase text-sm"
           >
             Nuestras Especialidades
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,8 +63,8 @@ const Services = () => {
           >
             Tratamientos Dentales en{" "}
             <span className="text-gold-dark">Tingo María y Aucayacu</span>
-          </motion.h2>
-          <motion.p
+          </m.h2>
+          <m.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -73,13 +73,13 @@ const Services = () => {
             La clínica dental premium de la Selva Central de Huánuco. Ofrecemos todos los
             tratamientos odontológicos bajo un mismo techo, con tecnología de vanguardia y
             atención personalizada.
-          </motion.p>
+          </m.p>
           <div className="w-20 h-1 bg-gold mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service, index) => (
-            <motion.div
+            <m.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ const Services = () => {
               <p className="text-gray-500 leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { useState } from "react";
 
@@ -56,7 +56,7 @@ const TESTIMONIALS = [
 ];
 
 const TestimonialCard = ({ testimonial, index }: { testimonial: typeof TESTIMONIALS[0]; index: number }) => (
-  <motion.div
+  <m.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -93,7 +93,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof TESTIMONI
         <p className="text-xs text-gray-400">{testimonial.location}</p>
       </div>
     </div>
-  </motion.div>
+  </m.div>
 );
 
 const Testimonials = () => {
@@ -104,15 +104,15 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.span
+          <m.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-gold font-bold tracking-[0.2em] uppercase text-sm"
           >
             Testimonios Reales
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -120,14 +120,14 @@ const Testimonials = () => {
           >
             Pacientes que{" "}
             <span className="text-gold-dark">Transformaron</span> su Vida
-          </motion.h2>
+          </m.h2>
           <p className="text-gray-500 text-lg">
             Más de 10,000 sonrisas felices nos respaldan. Estas son algunas de sus historias.
           </p>
         </div>
 
         {/* Stats Row */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -143,7 +143,7 @@ const Testimonials = () => {
               <p className="text-xs md:text-sm text-gray-400 font-medium uppercase tracking-wider mt-1">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
