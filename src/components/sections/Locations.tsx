@@ -68,6 +68,7 @@ const Locations = () => {
         <div className="md:hidden flex gap-2 mb-8 bg-white p-2 rounded-2xl border border-gray-100 shadow-sm">
           {SEDES.map((sede, index) => (
             <button
+              type="button"
               key={sede.name}
               onClick={() => setActiveTab(index)}
               className={`flex-1 py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 text-center ${

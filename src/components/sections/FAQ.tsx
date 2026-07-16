@@ -89,6 +89,7 @@ const FAQ = () => {
             <div className="flex flex-wrap gap-2 mb-10">
               {categories.map((cat) => (
                 <button
+                  type="button"
                   key={cat}
                   onClick={() => {
                     setActiveCategory(cat);
@@ -143,6 +144,7 @@ const FAQ = () => {
                 >
                   {/* Category badge + Question */}
                   <button
+                    type="button"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
                     }

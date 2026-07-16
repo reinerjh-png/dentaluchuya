@@ -5,6 +5,15 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
+/** Serializa JSON-LD de forma segura escapando caracteres XSS (CVE)
+ *  JSON.stringify NO escapa <, > ni & — un dato con <\/script> rompería el HTML.
+ */
+const safeJsonLd = (data: unknown): string =>
+  JSON.stringify(data)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -318,19 +327,19 @@ export default function RootLayout({
         {/* ── Structured Data (JSON-LD) ──────────────────── */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessSchema) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteSchema) }}
         />
       </head>
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>

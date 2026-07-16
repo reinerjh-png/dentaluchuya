@@ -149,7 +149,9 @@ const WhatsAppButton = () => {
                   <p className="text-white/75 text-sm mt-0.5">Respuesta inmediata · Sin compromiso</p>
                 </div>
                 <button
+                  type="button"
                   onClick={handleClose}
+                  aria-label="Cerrar chat de WhatsApp"
                   className="text-white/70 hover:text-white bg-white/20 rounded-full p-1.5 transition-colors"
                 >
                   <X size={20} />
@@ -183,6 +185,7 @@ const WhatsAppButton = () => {
                     </p>
                     {SEDES.map((sede) => (
                       <button
+                        type="button"
                         key={sede.id}
                         onClick={() => { setSelectedSede(sede); setStep(2); }}
                         className="w-full flex items-center justify-between p-4 rounded-2xl border-2 border-gray-100 hover:border-gold hover:bg-gold/5 transition-all text-left group"
@@ -222,6 +225,7 @@ const WhatsAppButton = () => {
                         Paso 2 de 2 · Elige el tratamiento
                       </p>
                       <button
+                        type="button"
                         onClick={() => { setStep(1); setSelectedService(""); }}
                         className="text-xs text-gold font-bold hover:underline"
                       >
@@ -241,6 +245,7 @@ const WhatsAppButton = () => {
                     <div className="grid grid-cols-1 gap-2 max-h-56 overflow-y-auto pr-1">
                       {SERVICIOS.map((s) => (
                         <button
+                          type="button"
                           key={s}
                           onClick={() => setSelectedService(s)}
                           className={cn(
@@ -256,6 +261,7 @@ const WhatsAppButton = () => {
                     </div>
 
                     <button
+                      type="button"
                       disabled={!selectedService}
                       onClick={handleSend}
                       className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-2xl font-bold text-base hover:bg-[#20ba5a] transition-colors disabled:opacity-40 disabled:cursor-not-allowed mt-2 shadow-lg"

@@ -3,6 +3,13 @@
 import { useRef, useState, useCallback } from "react";
 import { Play, Pause, Headphones } from "lucide-react";
 
+const formatTime = (s: number): string => {
+  if (!s || isNaN(s)) return "0:00";
+  const m = Math.floor(s / 60);
+  const sec = Math.floor(s % 60);
+  return `${m}:${sec.toString().padStart(2, "0")}`;
+};
+
 const AudioPlayer = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -45,12 +52,7 @@ const AudioPlayer = () => {
     setProgress(ratio * 100);
   };
 
-  const formatTime = (s: number) => {
-    if (!s || isNaN(s)) return "0:00";
-    const m = Math.floor(s / 60);
-    const sec = Math.floor(s % 60);
-    return `${m}:${sec.toString().padStart(2, "0")}`;
-  };
+
 
   const elapsed = audioRef.current ? (progress / 100) * duration : 0;
 
@@ -90,7 +92,14 @@ const AudioPlayer = () => {
             <div
               className="relative flex-1 h-2 bg-gray-200 rounded-full cursor-pointer group"
               onClick={seek}
+              onKeyDown={(e) => {
+                const audio = audioRef.current;
+                if (!audio || loadError) return;
+                if (e.key === "ArrowRight") audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
+                if (e.key === "ArrowLeft") audio.currentTime = Math.max(0, audio.currentTime - 5);
+              }}
               role="slider"
+              tabIndex={0}
               aria-label="Progreso del audio"
               aria-valuenow={Math.round(progress)}
               aria-valuemin={0}
@@ -114,6 +123,7 @@ const AudioPlayer = () => {
 
           {/* Right: Play/Pause button */}
           <button
+            type="button"
             onClick={toggle}
             aria-label={isPlaying ? "Pausar audio" : "Escuchar presentación de la clínica"}
             className="shrink-0 flex items-center gap-2 bg-gold-gradient text-white px-5 py-2.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-transform premium-shadow whitespace-nowrap"
@@ -135,6 +145,7 @@ const AudioPlayer = () => {
         preload="none"
       >
         <source src="/audio-presentacion.m4a" type="audio/mp4" />
+        <track kind="captions" srcLang="es" label="Español" />
       </audio>
     </section>
   );

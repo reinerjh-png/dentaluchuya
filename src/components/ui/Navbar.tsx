@@ -7,6 +7,15 @@ import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
+const navLinks = [
+  { name: "Servicios", href: "#servicios" },
+  { name: "Galería", href: "#galeria" },
+  { name: "Nosotros", href: "#nosotros" },
+  { name: "Equipo", href: "#equipo" },
+  { name: "Sedes", href: "#sedes" },
+  { name: "FAQ", href: "#faq" },
+];
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,14 +28,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Servicios", href: "#servicios" },
-    { name: "Galería", href: "#galeria" },
-    { name: "Nosotros", href: "#nosotros" },
-    { name: "Equipo", href: "#equipo" },
-    { name: "Sedes", href: "#sedes" },
-    { name: "FAQ", href: "#faq" },
-  ];
+
 
   return (
     <>
@@ -99,12 +101,13 @@ const Navbar = () => {
 
           {/* Mobile Toggle */}
           <button
+            type="button"
             className={cn(
               "lg:hidden p-2 rounded-xl transition-colors",
               isScrolled ? "text-gray-900" : "text-white"
             )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Abrir o cerrar menú de navegación"
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -124,7 +127,11 @@ const Navbar = () => {
             {/* Mobile header */}
             <div className="flex justify-between items-center px-6 py-5 border-b border-gray-100">
               <span className="font-heading font-bold text-xl tracking-wider">UCHUYA <span className="text-gold-dark text-sm">DENTAL</span></span>
-              <button onClick={() => setMobileMenuOpen(false)}>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Cerrar menú"
+              >
                 <X size={28} />
               </button>
             </div>

@@ -156,6 +156,7 @@ const Testimonials = () => {
         {visibleCount < TESTIMONIALS.length && (
           <div className="text-center mt-12">
             <button
+              type="button"
               onClick={() => setVisibleCount(TESTIMONIALS.length)}
               className="bg-gold-gradient text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform premium-shadow"
             >

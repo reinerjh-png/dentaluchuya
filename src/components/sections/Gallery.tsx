@@ -94,6 +94,16 @@ const Gallery = () => {
                 setLightboxAlt(item.alt);
                 setLightboxLabel(item.label);
               }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  setLightboxSrc(item.src);
+                  setLightboxAlt(item.alt);
+                  setLightboxLabel(item.label);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label={`Ver imagen ampliada: ${item.label}`}
               className={`${item.size} relative overflow-hidden rounded-3xl group cursor-pointer`}
             >
               <Image
@@ -151,7 +161,9 @@ const Gallery = () => {
             className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
           >
             <button
+              type="button"
               onClick={() => setLightboxSrc(null)}
+              aria-label="Cerrar imagen ampliada"
               className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 rounded-full p-2"
             >
               <X size={28} />
