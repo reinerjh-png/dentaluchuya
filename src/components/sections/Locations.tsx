@@ -71,7 +71,7 @@ const Locations = () => {
               type="button"
               key={sede.name}
               onClick={() => setActiveTab(index)}
-              className={`flex-1 py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 text-center ${
+              className={`flex-1 py-3 px-4 rounded-xl font-bold text-sm transition-colors duration-300 text-center ${
                 activeTab === index
                   ? "bg-gold text-white shadow-md"
                   : "text-gray-600 hover:text-black hover:bg-gray-50"
@@ -165,7 +165,7 @@ const Locations = () => {
                     href={sede.mapsDirections}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 border-2 border-gray-200 text-gray-700 py-3 rounded-xl font-bold text-sm hover:border-gold hover:text-gold transition-all"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-gray-200 text-gray-700 py-3 rounded-xl font-bold text-sm hover:border-gold hover:text-gold transition-colors"
                   >
                     <ExternalLink size={16} />
                     Cómo llegar

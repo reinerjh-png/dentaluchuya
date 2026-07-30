@@ -109,7 +109,7 @@ const Team = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Ver Instagram de ${member.name}`}
-                  className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white border border-white/20 hover:bg-gold hover:border-gold transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300"
+                  className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white border border-white/20 hover:bg-gold hover:border-gold transition opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300"
                 >
                   <InstagramIcon />
                 </a>

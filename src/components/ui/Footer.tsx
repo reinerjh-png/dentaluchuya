@@ -113,7 +113,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:bg-gold hover:border-gold hover:text-white transition-all duration-300"
+                  className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:bg-gold hover:border-gold hover:text-white transition-colors duration-300"
                 >
                   {s.icon}
                 </a>
@@ -133,7 +133,7 @@ const Footer = () => {
                     href={l.href}
                     className="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-0 h-px bg-gold transition-all duration-300 group-hover:w-3" />
+                    <span className="w-0 h-px bg-gold transition-[width] duration-300 group-hover:w-3" />
                     {l.name}
                   </Link>
                 </li>

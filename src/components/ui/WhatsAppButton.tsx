@@ -170,7 +170,7 @@ const WhatsAppButton = () => {
                   <div
                     key={s}
                     className={cn(
-                      "h-1 flex-1 rounded-full transition-all duration-300",
+                      "h-1 flex-1 rounded-full transition-colors duration-300",
                       step >= s ? "bg-gold" : "bg-gray-200"
                     )}
                   />
@@ -194,7 +194,7 @@ const WhatsAppButton = () => {
                         type="button"
                         key={sede.id}
                         onClick={() => { setSelectedSede(sede); setStep(2); }}
-                        className="w-full flex items-center justify-between p-4 rounded-2xl border-2 border-gray-100 hover:border-gold hover:bg-gold/5 transition-all text-left group"
+                        className="w-full flex items-center justify-between p-4 rounded-2xl border-2 border-gray-100 hover:border-gold hover:bg-gold/5 transition-colors text-left group"
                       >
                         <div className="flex items-center gap-4">
                           <div className="w-11 h-11 bg-gray-100 rounded-xl flex items-center justify-center group-hover:bg-gold/20 transition-colors shrink-0">
@@ -255,7 +255,7 @@ const WhatsAppButton = () => {
                           key={s}
                           onClick={() => setSelectedService(s)}
                           className={cn(
-                            "w-full text-left px-4 py-3 rounded-xl border-2 text-sm font-medium transition-all",
+                            "w-full text-left px-4 py-3 rounded-xl border-2 text-sm font-medium transition-colors",
                             selectedService === s
                               ? "border-gold bg-gold/10 text-gold-dark font-bold"
                               : "border-gray-100 hover:border-gold/40 text-gray-700"

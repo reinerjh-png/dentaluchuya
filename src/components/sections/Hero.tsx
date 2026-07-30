@@ -94,7 +94,7 @@ const Hero = () => {
             </Link>
             <Link
               href="#galeria"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-colors"
             >
               <Play size={18} className="fill-white" />
               Ver Resultados

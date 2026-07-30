@@ -61,7 +61,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof TESTIMONI
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.1, duration: 0.5 }}
     viewport={{ once: true }}
-    className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
+    className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 flex flex-col"
   >
     {/* Quote icon */}
     <Quote className="text-gold/30 mb-4" size={36} />

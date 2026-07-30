@@ -43,7 +43,7 @@ export default function Home() {
                 key={text}
                 className="flex items-center gap-4 group cursor-default"
               >
-                <div className="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold group-hover:bg-gold-gradient group-hover:text-white transition-all duration-300 shrink-0">
+                <div className="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold group-hover:bg-gold-gradient group-hover:text-white transition-colors duration-300 shrink-0">
                   <Icon size={26} />
                 </div>
                 <div>

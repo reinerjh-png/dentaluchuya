@@ -34,7 +34,7 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6",
+          "fixed top-0 left-0 w-full z-50 transition-[padding,background-color,box-shadow,border-color] duration-500 px-6",
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg py-3 border-b border-gray-100"
             : "bg-transparent py-5"
@@ -74,7 +74,7 @@ const Navbar = () => {
                 )}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-[width] duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>

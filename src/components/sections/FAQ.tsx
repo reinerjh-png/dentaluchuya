@@ -96,7 +96,7 @@ const FAQ = () => {
                     setOpenIndex(null);
                   }}
                   className={cn(
-                    "px-5 py-2 rounded-full text-sm font-bold transition-all",
+                    "px-5 py-2 rounded-full text-sm font-bold transition",
                     activeCategory === cat
                       ? "bg-gold-gradient text-white premium-shadow"
                       : "bg-white border border-gray-200 text-gray-600 hover:border-gold"
