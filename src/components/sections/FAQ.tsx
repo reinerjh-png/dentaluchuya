@@ -118,7 +118,7 @@ const FAQ = () => {
                 responderá en minutos.
               </p>
               <a
-                href="https://wa.me/51900755788?text=Hola,%20tengo%20una%20pregunta%20sobre%20los%20tratamientos"
+                href="https://wa.me/51966746478?text=Hola,%20tengo%20una%20pregunta%20sobre%20los%20tratamientos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-gold font-bold px-8 py-3 rounded-full hover:scale-105 transition-transform"

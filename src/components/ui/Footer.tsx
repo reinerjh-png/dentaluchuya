@@ -54,9 +54,9 @@ const SEDES = [
   {
     name: "Tingo María (Principal)",
     address: "Av. Alameda Perú 425, Tingo María 10131",
-    phone: "+51 900 755 788",
+    phone: "+51 966 746 478",
     hours: "Lun – Sáb: 9:00 AM – 8:00 PM",
-    whatsapp: "51900755788",
+    whatsapp: "51966746478",
   },
   {
     name: "Sede Aucayacu",

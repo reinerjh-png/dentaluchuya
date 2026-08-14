@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Clínica Dental Uchuya Premium de Mailyng: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Llama al +51 900 755 788.",
+    "Clínica Dental Uchuya Premium de Mailyng: líderes en diseño de sonrisa, implantes dentales, ortodoncia con brackets e Invisalign, blanqueamiento y odontopediatría en Tingo María y Aucayacu, Perú. Llama al +51 966 746 478.",
 
   keywords: [
     // Marca
@@ -150,7 +150,7 @@ const localBusinessSchema = {
   url: BASE_URL,
   logo: `${BASE_URL}/logouchuya.webp`,
   image: `${BASE_URL}/hero.webp`,
-  telephone: ["+51900755788", "+51935817120"],
+  telephone: ["+51966746478", "+51935817120"],
   email: "admidentaluchuya@gmail.com",
   priceRange: "$$",
   currenciesAccepted: "PEN",

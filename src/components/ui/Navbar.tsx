@@ -82,14 +82,14 @@ const Navbar = () => {
           {/* Desktop CTA buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+51900755788"
+              href="tel:+51966746478"
               className={cn(
                 "flex items-center gap-2 text-sm font-semibold transition-colors",
                 isScrolled ? "text-gray-600" : "text-white/80"
               )}
             >
               <Phone size={16} className="text-gold" />
-              900 755 788
+              966 746 478
             </a>
             <Link
               href="#sedes"
@@ -166,11 +166,11 @@ const Navbar = () => {
                 Agendar Cita
               </Link>
               <a
-                href="tel:+51900755788"
+                href="tel:+51966746478"
                 className="flex items-center justify-center gap-2 text-gray-600 font-semibold"
               >
                 <Phone size={18} className="text-gold" />
-                +51 900 755 788
+                +51 966 746 478
               </a>
             </div>
           </m.div>

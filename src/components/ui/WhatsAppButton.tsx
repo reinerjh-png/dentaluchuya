@@ -10,7 +10,7 @@ const SEDES = [
     id: "tingomaria",
     name: "Tingo María",
     badge: "Principal",
-    number: "51900755788",
+    number: "51966746478",
     address: "Av. Alameda Perú 425",
     hours: "Lun–Sáb 9am–8pm",
   },
