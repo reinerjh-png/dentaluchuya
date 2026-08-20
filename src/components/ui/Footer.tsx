@@ -54,7 +54,7 @@ const SEDES = [
   {
     name: "Tingo María (Principal)",
     address: "Av. Alameda Perú 425, Tingo María 10131",
-    phone: "+51 966 746 478",
+    phone: "+51 900755788",
     hours: "Lun – Sáb: 9:00 AM – 8:00 PM",
     whatsapp: "51966746478",
   },
@@ -62,7 +62,7 @@ const SEDES = [
     name: "Sede Aucayacu",
     address: "Av. Lima 455, Aucayacu 10171",
     phone: "+51 935 817 120",
-    hours: "Lun – Sáb: 9:00 AM – 7:00 PM",
+    hours: "Lun – Sáb: 9:00 AM – 8:00 PM",
     whatsapp: "51935817120",
   },
 ];

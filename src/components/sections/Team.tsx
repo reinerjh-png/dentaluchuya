@@ -14,7 +14,7 @@ const InstagramIcon = () => (
 const TEAM = [
   {
     name: "Cd. Fernando Uchuya",
-    role: "Odontólogo Principal & Director Médico",
+    role: "Odontólogo Principal & Cirujano Dentista",
     specialty: "Ortodoncia · Implantes · Rehabilitación",
     bio: "Fundador de la Clínica Dental Uchuya Premium de Mailyng en Tingo María. Con más de 10 años transformando sonrisas en la Selva Central del Perú, lidera un equipo de élite comprometido con la excelencia clínica.",
     image: "/druchuya.webp",
@@ -25,9 +25,9 @@ const TEAM = [
   {
     name: "Cd. Roberto Hidalgo",
     role: "Cirujano Dentista – Sede Aucayacu",
-    specialty: "Brackets · Endodoncia · Ortopedia Maxilar",
+    specialty: "Endodoncia · Odontología General",
     bio: "Especialista en ortodoncia y corrección de maloclusiones al servicio de los pacientes de Aucayacu y la región de Huánuco. Usa las técnicas más modernas para lograr sonrisas alineadas y armoniosas.",
-    image: "/dcroberto.webp",
+    image: "/roberto.webp",
     imageAlt: "Dr. Roberto Hidalgo – Especialista en ortodoncia en la sede Aucayacu de Clínica Dental Uchuya, Huánuco",
     instagram: "https://www.instagram.com/clinicadentaluchuya_premium",
     awards: ["Cirujano dentista", "Diplomado en endodoncia", "Miembro COP"],
